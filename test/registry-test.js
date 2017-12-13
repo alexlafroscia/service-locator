@@ -23,10 +23,8 @@ test('it can overwrite a value at a key', t => {
   t.is(registry.lookup('foo'), newValue);
 });
 
-test('it throws an error when looking up an unregistered key', t => {
-  t.throws(() => {
-    registry.lookup('foo');
-  });
+test('it returns `undefined` when a key has not been registered', t => {
+  t.is(registry.lookup('foo'), undefined);
 });
 
 test('it can reset the registry', t => {
@@ -35,7 +33,5 @@ test('it can reset the registry', t => {
   registry.register('foo', value);
   registry.reset();
 
-  t.throws(() => {
-    registry.lookup('foo');
-  });
+  t.is(registry.lookup('foo'), undefined);
 });

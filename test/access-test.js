@@ -1,15 +1,16 @@
 import test from 'ava';
-import registry, { withAccessTo } from '../lib';
+import registry, { RegistryAccess } from '../lib';
 
 test.beforeEach(() => {
   registry.register('foo', 'bar');
 });
 
 test('can define a class that looks something up in the registry', t => {
-  class Foo extends withAccessTo('foo') {}
+  class Foo extends RegistryAccess() {}
 
   const instance = new Foo();
   t.is(instance.foo, 'bar');
+  t.pass(instance instanceof Foo);
 });
 
 test('can extend a base class and provide registry access', t => {
@@ -19,9 +20,10 @@ test('can extend a base class and provide registry access', t => {
     }
   }
 
-  class ExtendedBase extends withAccessTo(Base, 'foo') {}
+  class ExtendedBase extends RegistryAccess(Base) {}
 
   const instance = new ExtendedBase();
   t.is(instance.foo, 'bar');
   t.is(instance.baseProperty, 'baseProperty');
+  t.pass(instance instanceof ExtendedBase);
 });
