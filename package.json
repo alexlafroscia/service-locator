@@ -1,0 +1,17 @@
+{
+  "name": "service-locator",
+  "version": "1.0.0",
+  "description": "Serice locator pattern for ES6 classes",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "prettier": "^1.9.2"
+  }
+}
