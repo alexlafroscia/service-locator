@@ -4,7 +4,11 @@
   "description": "Serice locator pattern for ES6 classes",
   "main": "lib/index.js",
   "license": "MIT",
+  "module": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "ava"
@@ -15,6 +19,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.3.1",
     "faker": "^4.1.0",
+    "microbundle": "^0.2.4",
     "prettier": "^1.9.2"
   }
 }
