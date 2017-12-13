@@ -1,6 +1,6 @@
 import test from 'ava';
 import faker from 'faker';
-import registry from '../lib';
+import { registry } from '../lib';
 
 test.afterEach(() => {
   registry.reset();
