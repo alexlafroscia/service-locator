@@ -1,4 +1,4 @@
-# service-locator
+# @alexlafroscia/service-locator
 
 A JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.
 

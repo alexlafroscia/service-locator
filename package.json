@@ -1,5 +1,5 @@
 {
-  "name": "service-locator",
+  "name": "@alexlafroscia/service-locator",
   "version": "1.0.0",
   "description": "Serice locator pattern for ES6 classes",
   "main": "dist/index.js",

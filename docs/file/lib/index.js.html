@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">lib/index.js | service-locator</title>
+  <title data-ice="title">lib/index.js | @alexlafroscia/service-locator</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="Serice locator pattern for ES6 classes"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="service-locator"><meta property="twitter:description" content="Serice locator pattern for ES6 classes"></head>
+<meta name="description" content="Serice locator pattern for ES6 classes"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@alexlafroscia/service-locator"><meta property="twitter:description" content="Serice locator pattern for ES6 classes"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -43,7 +43,7 @@
  * The instance of the registry to share between classes that inject it
  *
  * @example &lt;caption&gt;Getting access to the registry&lt;/caption&gt;
- * import { registry } from &apos;service-locator&apos;;
+ * import { registry } from &apos;@alexlafroscia/service-locator&apos;;
  *
  * @example &lt;caption&gt;Registering a static value&lt;/caption&gt;
  * registry.register(&apos;config&apos;, {
@@ -70,7 +70,7 @@ function registerForAccess(context) {
 /**
  * @class RegistryAccess
  * @example &lt;caption&gt;A class that accesses the registry&lt;/caption&gt;
- * import { registry, RegistryAccess } from &apos;service-locator&apos;;
+ * import { registry, RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
  *
  * registry.register(&apos;config&apos;, {
  *   loggedIn: true
@@ -93,7 +93,7 @@ export class RegistryAccess {
    * @param {T} Klass the base class to extend
    * @return {RegistryAccess&lt;T&gt;} the base class with the registry access mixed in
    * @example &lt;caption&gt;Extending a base class and gaining registry access&lt;/caption&gt;
-   * import { RegistryAccess } from &apos;service-locator&apos;;
+   * import { RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
    *
    * class Foo {
    *   constructor() {

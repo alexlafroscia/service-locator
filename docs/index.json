@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "lib/index.js",
-    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
+    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
     "static": true,
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/index.js",
     "access": "public",
@@ -583,11 +583,11 @@
     "longname": "lib/index.js~registry",
     "access": "public",
     "export": true,
-    "importPath": "service-locator/lib/index.js",
+    "importPath": "@alexlafroscia/service-locator/lib/index.js",
     "importStyle": "{registry}",
     "description": "The instance of the registry to share between classes that inject it",
     "examples": [
-      "<caption>Getting access to the registry</caption>\nimport { registry } from 'service-locator';",
+      "<caption>Getting access to the registry</caption>\nimport { registry } from '@alexlafroscia/service-locator';",
       "<caption>Registering a static value</caption>\nregistry.register('config', {\n  loggedIn: true\n});",
       "<caption>Setting a value out of the registry</caption>\nconst config = registry.lookup('config');"
     ],
@@ -609,7 +609,7 @@
     "longname": "lib/index.js~registerForAccess",
     "access": "public",
     "export": false,
-    "importPath": "service-locator/lib/index.js",
+    "importPath": "@alexlafroscia/service-locator/lib/index.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 19,
@@ -638,11 +638,11 @@
     "longname": "lib/index.js~RegistryAccess",
     "access": "public",
     "export": true,
-    "importPath": "service-locator/lib/index.js",
+    "importPath": "@alexlafroscia/service-locator/lib/index.js",
     "importStyle": "{RegistryAccess}",
     "description": "",
     "examples": [
-      "<caption>A class that accesses the registry</caption>\nimport { registry, RegistryAccess } from 'service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass SomethingWithRegistryAccess extends RegistryAccess {\n  get shouldShowAccount() {\n    return this.config.loggedIn;\n  }\n}"
+      "<caption>A class that accesses the registry</caption>\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass SomethingWithRegistryAccess extends RegistryAccess {\n  get shouldShowAccount() {\n    return this.config.loggedIn;\n  }\n}"
     ],
     "lineNumber": 46,
     "unknown": [
@@ -679,7 +679,7 @@
     "access": "public",
     "description": "Allows registry access to be mixed into some other class",
     "examples": [
-      "<caption>Extending a base class and gaining registry access</caption>\nimport { RegistryAccess } from 'service-locator';\n\nclass Foo {\n  constructor() {\n    ...\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}"
+      "<caption>Extending a base class and gaining registry access</caption>\nimport { RegistryAccess } from '@alexlafroscia/service-locator';\n\nclass Foo {\n  constructor() {\n    ...\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}"
     ],
     "lineNumber": 67,
     "params": [
@@ -723,7 +723,7 @@
     "longname": "lib/registry.js~Registry",
     "access": "public",
     "export": true,
-    "importPath": "service-locator/lib/registry.js",
+    "importPath": "@alexlafroscia/service-locator/lib/registry.js",
     "importStyle": "Registry",
     "description": "Holds onto references to the items in the registry\n\nAlso stores metadata about the things stored",
     "lineNumber": 8,
@@ -870,7 +870,7 @@
   },
   {
     "kind": "index",
-    "content": "# service-locator\n\nA JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.\n\n## Why?\n\nI've struggled with making a complex set of components using [Skate.js][skate] where all components needed access to some state. I didn't want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I'm used to with [Ember.js][ember]. So, I started messing around with this.\n\n## Should I use this?\n\nProbably not. In reality, it's not that different than just accessing everything off the `window`, and we all know that's a bad idea. It's more just an idea that I'm messing around with.\n\n## Prior Art\n\n- [Ember.js service injection][ember service injection]\n\n[service locator pattern]: https://martinfowler.com/articles/injection.html\n[skate]: https://github.com/skatejs/skatejs\n[ember]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[ember service injection]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n",
+    "content": "# @alexlafroscia/service-locator\n\nA JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.\n\n## Why?\n\nI've struggled with making a complex set of components using [Skate.js][skate] where all components needed access to some state. I didn't want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I'm used to with [Ember.js][ember]. So, I started messing around with this.\n\n## Should I use this?\n\nProbably not. In reality, it's not that different than just accessing everything off the `window`, and we all know that's a bad idea. It's more just an idea that I'm messing around with.\n\n## Prior Art\n\n- [Ember.js service injection][ember service injection]\n\n[service locator pattern]: https://martinfowler.com/articles/injection.html\n[skate]: https://github.com/skatejs/skatejs\n[ember]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[ember service injection]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n",
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/README.md",
     "name": "./README.md",
     "static": true,
@@ -878,7 +878,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"service-locator\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Serice locator pattern for ES6 classes\",\n  \"main\": \"dist/index.js\",\n  \"license\": \"MIT\",\n  \"module\": \"lib/index.js\",\n  \"files\": [\n    \"dist\",\n    \"lib\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'\",\n    \"doc\": \"esdoc\",\n    \"lint\": \"eslint .\",\n    \"lint:fix\": \"eslint --fix .\",\n    \"pretest\": \"yarn build\",\n    \"test\": \"ava\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.24.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.13.1\",\n    \"eslint-config-prettier\": \"^2.9.0\",\n    \"eslint-plugin-prettier\": \"^2.3.1\",\n    \"faker\": \"^4.1.0\",\n    \"prettier\": \"^1.9.2\",\n    \"rollup\": \"^0.52.1\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"@alexlafroscia/service-locator\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Serice locator pattern for ES6 classes\",\n  \"main\": \"dist/index.js\",\n  \"license\": \"MIT\",\n  \"module\": \"lib/index.js\",\n  \"files\": [\n    \"dist\",\n    \"lib\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'\",\n    \"doc\": \"esdoc\",\n    \"lint\": \"eslint .\",\n    \"lint:fix\": \"eslint --fix .\",\n    \"pretest\": \"yarn build\",\n    \"test\": \"ava\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.24.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.13.1\",\n    \"eslint-config-prettier\": \"^2.9.0\",\n    \"eslint-plugin-prettier\": \"^2.3.1\",\n    \"faker\": \"^4.1.0\",\n    \"prettier\": \"^1.9.2\",\n    \"rollup\": \"^0.52.1\"\n  }\n}\n",
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/package.json",
     "name": "package.json",
     "static": true,

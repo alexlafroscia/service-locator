@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1825,
+  "end": 1870,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1825,
+    "end": 1870,
     "loc": {
       "start": {
         "line": 1,
@@ -99,9 +99,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
             "start": 36,
-            "end": 463,
+            "end": 478,
             "loc": {
               "start": {
                 "line": 3,
@@ -117,8 +117,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 464,
-        "end": 503,
+        "start": 479,
+        "end": 518,
         "loc": {
           "start": {
             "line": 17,
@@ -133,8 +133,8 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 471,
-          "end": 503,
+          "start": 486,
+          "end": 518,
           "loc": {
             "start": {
               "line": 17,
@@ -148,8 +148,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 477,
-              "end": 502,
+              "start": 492,
+              "end": 517,
               "loc": {
                 "start": {
                   "line": 17,
@@ -162,8 +162,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 477,
-                "end": 485,
+                "start": 492,
+                "end": 500,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -180,8 +180,8 @@
               },
               "init": {
                 "type": "NewExpression",
-                "start": 488,
-                "end": 502,
+                "start": 503,
+                "end": 517,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -194,8 +194,8 @@
                 },
                 "callee": {
                   "type": "Identifier",
-                  "start": 492,
-                  "end": 500,
+                  "start": 507,
+                  "end": 515,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -218,9 +218,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+              "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
               "start": 36,
-              "end": 463,
+              "end": 478,
               "loc": {
                 "start": {
                   "line": 3,
@@ -238,9 +238,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
             "start": 36,
-            "end": 463,
+            "end": 478,
             "loc": {
               "start": {
                 "line": 3,
@@ -256,8 +256,8 @@
       },
       {
         "type": "FunctionDeclaration",
-        "start": 505,
-        "end": 712,
+        "start": 520,
+        "end": 727,
         "loc": {
           "start": {
             "line": 19,
@@ -270,8 +270,8 @@
         },
         "id": {
           "type": "Identifier",
-          "start": 514,
-          "end": 531,
+          "start": 529,
+          "end": 546,
           "loc": {
             "start": {
               "line": 19,
@@ -291,8 +291,8 @@
         "params": [
           {
             "type": "Identifier",
-            "start": 532,
-            "end": 539,
+            "start": 547,
+            "end": 554,
             "loc": {
               "start": {
                 "line": 19,
@@ -309,8 +309,8 @@
         ],
         "body": {
           "type": "BlockStatement",
-          "start": 541,
-          "end": 712,
+          "start": 556,
+          "end": 727,
           "loc": {
             "start": {
               "line": 19,
@@ -324,8 +324,8 @@
           "body": [
             {
               "type": "ReturnStatement",
-              "start": 545,
-              "end": 710,
+              "start": 560,
+              "end": 725,
               "loc": {
                 "start": {
                   "line": 20,
@@ -338,8 +338,8 @@
               },
               "argument": {
                 "type": "NewExpression",
-                "start": 552,
-                "end": 709,
+                "start": 567,
+                "end": 724,
                 "loc": {
                   "start": {
                     "line": 20,
@@ -352,8 +352,8 @@
                 },
                 "callee": {
                   "type": "Identifier",
-                  "start": 556,
-                  "end": 561,
+                  "start": 571,
+                  "end": 576,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -370,8 +370,8 @@
                 "arguments": [
                   {
                     "type": "Identifier",
-                    "start": 562,
-                    "end": 569,
+                    "start": 577,
+                    "end": 584,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -387,8 +387,8 @@
                   },
                   {
                     "type": "ObjectExpression",
-                    "start": 571,
-                    "end": 708,
+                    "start": 586,
+                    "end": 723,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -402,8 +402,8 @@
                     "properties": [
                       {
                         "type": "ObjectMethod",
-                        "start": 577,
-                        "end": 704,
+                        "start": 592,
+                        "end": 719,
                         "loc": {
                           "start": {
                             "line": 21,
@@ -419,8 +419,8 @@
                         "computed": false,
                         "key": {
                           "type": "Identifier",
-                          "start": 577,
-                          "end": 580,
+                          "start": 592,
+                          "end": 595,
                           "loc": {
                             "start": {
                               "line": 21,
@@ -442,8 +442,8 @@
                         "params": [
                           {
                             "type": "Identifier",
-                            "start": 581,
-                            "end": 587,
+                            "start": 596,
+                            "end": 602,
                             "loc": {
                               "start": {
                                 "line": 21,
@@ -459,8 +459,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 589,
-                            "end": 593,
+                            "start": 604,
+                            "end": 608,
                             "loc": {
                               "start": {
                                 "line": 21,
@@ -477,8 +477,8 @@
                         ],
                         "body": {
                           "type": "BlockStatement",
-                          "start": 595,
-                          "end": 704,
+                          "start": 610,
+                          "end": 719,
                           "loc": {
                             "start": {
                               "line": 21,
@@ -492,8 +492,8 @@
                           "body": [
                             {
                               "type": "IfStatement",
-                              "start": 603,
-                              "end": 661,
+                              "start": 618,
+                              "end": 676,
                               "loc": {
                                 "start": {
                                   "line": 22,
@@ -506,8 +506,8 @@
                               },
                               "test": {
                                 "type": "BinaryExpression",
-                                "start": 607,
-                                "end": 621,
+                                "start": 622,
+                                "end": 636,
                                 "loc": {
                                   "start": {
                                     "line": 22,
@@ -520,8 +520,8 @@
                                 },
                                 "left": {
                                   "type": "Identifier",
-                                  "start": 607,
-                                  "end": 611,
+                                  "start": 622,
+                                  "end": 626,
                                   "loc": {
                                     "start": {
                                       "line": 22,
@@ -538,8 +538,8 @@
                                 "operator": "in",
                                 "right": {
                                   "type": "Identifier",
-                                  "start": 615,
-                                  "end": 621,
+                                  "start": 630,
+                                  "end": 636,
                                   "loc": {
                                     "start": {
                                       "line": 22,
@@ -556,8 +556,8 @@
                               },
                               "consequent": {
                                 "type": "BlockStatement",
-                                "start": 623,
-                                "end": 661,
+                                "start": 638,
+                                "end": 676,
                                 "loc": {
                                   "start": {
                                     "line": 22,
@@ -571,8 +571,8 @@
                                 "body": [
                                   {
                                     "type": "ReturnStatement",
-                                    "start": 633,
-                                    "end": 653,
+                                    "start": 648,
+                                    "end": 668,
                                     "loc": {
                                       "start": {
                                         "line": 23,
@@ -585,8 +585,8 @@
                                     },
                                     "argument": {
                                       "type": "MemberExpression",
-                                      "start": 640,
-                                      "end": 652,
+                                      "start": 655,
+                                      "end": 667,
                                       "loc": {
                                         "start": {
                                           "line": 23,
@@ -599,8 +599,8 @@
                                       },
                                       "object": {
                                         "type": "Identifier",
-                                        "start": 640,
-                                        "end": 646,
+                                        "start": 655,
+                                        "end": 661,
                                         "loc": {
                                           "start": {
                                             "line": 23,
@@ -616,8 +616,8 @@
                                       },
                                       "property": {
                                         "type": "Identifier",
-                                        "start": 647,
-                                        "end": 651,
+                                        "start": 662,
+                                        "end": 666,
                                         "loc": {
                                           "start": {
                                             "line": 23,
@@ -641,8 +641,8 @@
                             },
                             {
                               "type": "ReturnStatement",
-                              "start": 669,
-                              "end": 698,
+                              "start": 684,
+                              "end": 713,
                               "loc": {
                                 "start": {
                                   "line": 26,
@@ -655,8 +655,8 @@
                               },
                               "argument": {
                                 "type": "CallExpression",
-                                "start": 676,
-                                "end": 697,
+                                "start": 691,
+                                "end": 712,
                                 "loc": {
                                   "start": {
                                     "line": 26,
@@ -669,8 +669,8 @@
                                 },
                                 "callee": {
                                   "type": "MemberExpression",
-                                  "start": 676,
-                                  "end": 691,
+                                  "start": 691,
+                                  "end": 706,
                                   "loc": {
                                     "start": {
                                       "line": 26,
@@ -683,8 +683,8 @@
                                   },
                                   "object": {
                                     "type": "Identifier",
-                                    "start": 676,
-                                    "end": 684,
+                                    "start": 691,
+                                    "end": 699,
                                     "loc": {
                                       "start": {
                                         "line": 26,
@@ -700,8 +700,8 @@
                                   },
                                   "property": {
                                     "type": "Identifier",
-                                    "start": 685,
-                                    "end": 691,
+                                    "start": 700,
+                                    "end": 706,
                                     "loc": {
                                       "start": {
                                         "line": 26,
@@ -720,8 +720,8 @@
                                 "arguments": [
                                   {
                                     "type": "Identifier",
-                                    "start": 692,
-                                    "end": 696,
+                                    "start": 707,
+                                    "end": 711,
                                     "loc": {
                                       "start": {
                                         "line": 26,
@@ -754,9 +754,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
-            "start": 714,
-            "end": 1082,
+            "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
+            "start": 729,
+            "end": 1112,
             "loc": {
               "start": {
                 "line": 31,
@@ -772,8 +772,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 1083,
-        "end": 1824,
+        "start": 1113,
+        "end": 1869,
         "loc": {
           "start": {
             "line": 46,
@@ -788,8 +788,8 @@
         "source": null,
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 1090,
-          "end": 1824,
+          "start": 1120,
+          "end": 1869,
           "loc": {
             "start": {
               "line": 46,
@@ -802,8 +802,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 1096,
-            "end": 1110,
+            "start": 1126,
+            "end": 1140,
             "loc": {
               "start": {
                 "line": 46,
@@ -821,8 +821,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 1111,
-            "end": 1824,
+            "start": 1141,
+            "end": 1869,
             "loc": {
               "start": {
                 "line": 46,
@@ -836,8 +836,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1115,
-                "end": 1170,
+                "start": 1145,
+                "end": 1200,
                 "loc": {
                   "start": {
                     "line": 47,
@@ -852,8 +852,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1115,
-                  "end": 1126,
+                  "start": 1145,
+                  "end": 1156,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -875,8 +875,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1129,
-                  "end": 1170,
+                  "start": 1159,
+                  "end": 1200,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -890,8 +890,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1135,
-                      "end": 1166,
+                      "start": 1165,
+                      "end": 1196,
                       "loc": {
                         "start": {
                           "line": 48,
@@ -904,8 +904,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 1142,
-                        "end": 1165,
+                        "start": 1172,
+                        "end": 1195,
                         "loc": {
                           "start": {
                             "line": 48,
@@ -918,8 +918,8 @@
                         },
                         "callee": {
                           "type": "Identifier",
-                          "start": 1142,
-                          "end": 1159,
+                          "start": 1172,
+                          "end": 1189,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -936,8 +936,8 @@
                         "arguments": [
                           {
                             "type": "ThisExpression",
-                            "start": 1160,
-                            "end": 1164,
+                            "start": 1190,
+                            "end": 1194,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -959,9 +959,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
-                    "start": 1174,
-                    "end": 1667,
+                    "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
+                    "start": 1204,
+                    "end": 1712,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -977,8 +977,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1670,
-                "end": 1822,
+                "start": 1715,
+                "end": 1867,
                 "loc": {
                   "start": {
                     "line": 67,
@@ -993,8 +993,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1677,
-                  "end": 1682,
+                  "start": 1722,
+                  "end": 1727,
                   "loc": {
                     "start": {
                       "line": 67,
@@ -1016,8 +1016,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1683,
-                    "end": 1688,
+                    "start": 1728,
+                    "end": 1733,
                     "loc": {
                       "start": {
                         "line": 67,
@@ -1034,8 +1034,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1690,
-                  "end": 1822,
+                  "start": 1735,
+                  "end": 1867,
                   "loc": {
                     "start": {
                       "line": 67,
@@ -1049,8 +1049,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1696,
-                      "end": 1818,
+                      "start": 1741,
+                      "end": 1863,
                       "loc": {
                         "start": {
                           "line": 68,
@@ -1063,8 +1063,8 @@
                       },
                       "argument": {
                         "type": "ClassExpression",
-                        "start": 1703,
-                        "end": 1817,
+                        "start": 1748,
+                        "end": 1862,
                         "loc": {
                           "start": {
                             "line": 68,
@@ -1078,8 +1078,8 @@
                         "id": null,
                         "superClass": {
                           "type": "Identifier",
-                          "start": 1717,
-                          "end": 1722,
+                          "start": 1762,
+                          "end": 1767,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1095,8 +1095,8 @@
                         },
                         "body": {
                           "type": "ClassBody",
-                          "start": 1723,
-                          "end": 1817,
+                          "start": 1768,
+                          "end": 1862,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1110,8 +1110,8 @@
                           "body": [
                             {
                               "type": "ClassMethod",
-                              "start": 1731,
-                              "end": 1811,
+                              "start": 1776,
+                              "end": 1856,
                               "loc": {
                                 "start": {
                                   "line": 69,
@@ -1126,8 +1126,8 @@
                               "computed": false,
                               "key": {
                                 "type": "Identifier",
-                                "start": 1731,
-                                "end": 1742,
+                                "start": 1776,
+                                "end": 1787,
                                 "loc": {
                                   "start": {
                                     "line": 69,
@@ -1149,8 +1149,8 @@
                               "params": [],
                               "body": {
                                 "type": "BlockStatement",
-                                "start": 1745,
-                                "end": 1811,
+                                "start": 1790,
+                                "end": 1856,
                                 "loc": {
                                   "start": {
                                     "line": 69,
@@ -1164,8 +1164,8 @@
                                 "body": [
                                   {
                                     "type": "ExpressionStatement",
-                                    "start": 1755,
-                                    "end": 1763,
+                                    "start": 1800,
+                                    "end": 1808,
                                     "loc": {
                                       "start": {
                                         "line": 70,
@@ -1178,8 +1178,8 @@
                                     },
                                     "expression": {
                                       "type": "CallExpression",
-                                      "start": 1755,
-                                      "end": 1762,
+                                      "start": 1800,
+                                      "end": 1807,
                                       "loc": {
                                         "start": {
                                           "line": 70,
@@ -1192,8 +1192,8 @@
                                       },
                                       "callee": {
                                         "type": "Super",
-                                        "start": 1755,
-                                        "end": 1760,
+                                        "start": 1800,
+                                        "end": 1805,
                                         "loc": {
                                           "start": {
                                             "line": 70,
@@ -1210,8 +1210,8 @@
                                   },
                                   {
                                     "type": "ReturnStatement",
-                                    "start": 1772,
-                                    "end": 1803,
+                                    "start": 1817,
+                                    "end": 1848,
                                     "loc": {
                                       "start": {
                                         "line": 71,
@@ -1224,8 +1224,8 @@
                                     },
                                     "argument": {
                                       "type": "CallExpression",
-                                      "start": 1779,
-                                      "end": 1802,
+                                      "start": 1824,
+                                      "end": 1847,
                                       "loc": {
                                         "start": {
                                           "line": 71,
@@ -1238,8 +1238,8 @@
                                       },
                                       "callee": {
                                         "type": "Identifier",
-                                        "start": 1779,
-                                        "end": 1796,
+                                        "start": 1824,
+                                        "end": 1841,
                                         "loc": {
                                           "start": {
                                             "line": 71,
@@ -1256,8 +1256,8 @@
                                       "arguments": [
                                         {
                                           "type": "ThisExpression",
-                                          "start": 1797,
-                                          "end": 1801,
+                                          "start": 1842,
+                                          "end": 1846,
                                           "loc": {
                                             "start": {
                                               "line": 71,
@@ -1286,9 +1286,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
-                    "start": 1174,
-                    "end": 1667,
+                    "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
+                    "start": 1204,
+                    "end": 1712,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -1307,9 +1307,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
-              "start": 714,
-              "end": 1082,
+              "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
+              "start": 729,
+              "end": 1112,
               "loc": {
                 "start": {
                   "line": 31,
@@ -1327,9 +1327,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
-            "start": 714,
-            "end": 1082,
+            "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
+            "start": 729,
+            "end": 1112,
             "loc": {
               "start": {
                 "line": 31,
@@ -1349,9 +1349,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
       "start": 36,
-      "end": 463,
+      "end": 478,
       "loc": {
         "start": {
           "line": 3,
@@ -1365,9 +1365,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
-      "start": 714,
-      "end": 1082,
+      "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
+      "start": 729,
+      "end": 1112,
       "loc": {
         "start": {
           "line": 31,
@@ -1381,9 +1381,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
-      "start": 1174,
-      "end": 1667,
+      "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
+      "start": 1204,
+      "end": 1712,
       "loc": {
         "start": {
           "line": 51,
@@ -1532,9 +1532,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
       "start": 36,
-      "end": 463,
+      "end": 478,
       "loc": {
         "start": {
           "line": 3,
@@ -1561,8 +1561,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 464,
-      "end": 470,
+      "start": 479,
+      "end": 485,
       "loc": {
         "start": {
           "line": 17,
@@ -1589,8 +1589,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 471,
-      "end": 476,
+      "start": 486,
+      "end": 491,
       "loc": {
         "start": {
           "line": 17,
@@ -1615,8 +1615,8 @@
         "binop": null
       },
       "value": "registry",
-      "start": 477,
-      "end": 485,
+      "start": 492,
+      "end": 500,
       "loc": {
         "start": {
           "line": 17,
@@ -1642,8 +1642,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 486,
-      "end": 487,
+      "start": 501,
+      "end": 502,
       "loc": {
         "start": {
           "line": 17,
@@ -1670,8 +1670,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 488,
-      "end": 491,
+      "start": 503,
+      "end": 506,
       "loc": {
         "start": {
           "line": 17,
@@ -1696,8 +1696,8 @@
         "binop": null
       },
       "value": "Registry",
-      "start": 492,
-      "end": 500,
+      "start": 507,
+      "end": 515,
       "loc": {
         "start": {
           "line": 17,
@@ -1721,8 +1721,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 500,
-      "end": 501,
+      "start": 515,
+      "end": 516,
       "loc": {
         "start": {
           "line": 17,
@@ -1746,8 +1746,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 501,
-      "end": 502,
+      "start": 516,
+      "end": 517,
       "loc": {
         "start": {
           "line": 17,
@@ -1772,8 +1772,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 502,
-      "end": 503,
+      "start": 517,
+      "end": 518,
       "loc": {
         "start": {
           "line": 17,
@@ -1799,8 +1799,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 505,
-      "end": 513,
+      "start": 520,
+      "end": 528,
       "loc": {
         "start": {
           "line": 19,
@@ -1825,8 +1825,8 @@
         "binop": null
       },
       "value": "registerForAccess",
-      "start": 514,
-      "end": 531,
+      "start": 529,
+      "end": 546,
       "loc": {
         "start": {
           "line": 19,
@@ -1850,8 +1850,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 531,
-      "end": 532,
+      "start": 546,
+      "end": 547,
       "loc": {
         "start": {
           "line": 19,
@@ -1876,8 +1876,8 @@
         "binop": null
       },
       "value": "context",
-      "start": 532,
-      "end": 539,
+      "start": 547,
+      "end": 554,
       "loc": {
         "start": {
           "line": 19,
@@ -1901,8 +1901,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 539,
-      "end": 540,
+      "start": 554,
+      "end": 555,
       "loc": {
         "start": {
           "line": 19,
@@ -1926,8 +1926,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 541,
-      "end": 542,
+      "start": 556,
+      "end": 557,
       "loc": {
         "start": {
           "line": 19,
@@ -1954,8 +1954,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 545,
-      "end": 551,
+      "start": 560,
+      "end": 566,
       "loc": {
         "start": {
           "line": 20,
@@ -1982,8 +1982,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 552,
-      "end": 555,
+      "start": 567,
+      "end": 570,
       "loc": {
         "start": {
           "line": 20,
@@ -2008,8 +2008,8 @@
         "binop": null
       },
       "value": "Proxy",
-      "start": 556,
-      "end": 561,
+      "start": 571,
+      "end": 576,
       "loc": {
         "start": {
           "line": 20,
@@ -2033,8 +2033,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 561,
-      "end": 562,
+      "start": 576,
+      "end": 577,
       "loc": {
         "start": {
           "line": 20,
@@ -2059,8 +2059,8 @@
         "binop": null
       },
       "value": "context",
-      "start": 562,
-      "end": 569,
+      "start": 577,
+      "end": 584,
       "loc": {
         "start": {
           "line": 20,
@@ -2085,8 +2085,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 569,
-      "end": 570,
+      "start": 584,
+      "end": 585,
       "loc": {
         "start": {
           "line": 20,
@@ -2110,8 +2110,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 571,
-      "end": 572,
+      "start": 586,
+      "end": 587,
       "loc": {
         "start": {
           "line": 20,
@@ -2136,8 +2136,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 577,
-      "end": 580,
+      "start": 592,
+      "end": 595,
       "loc": {
         "start": {
           "line": 21,
@@ -2161,8 +2161,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 580,
-      "end": 581,
+      "start": 595,
+      "end": 596,
       "loc": {
         "start": {
           "line": 21,
@@ -2187,8 +2187,8 @@
         "binop": null
       },
       "value": "target",
-      "start": 581,
-      "end": 587,
+      "start": 596,
+      "end": 602,
       "loc": {
         "start": {
           "line": 21,
@@ -2213,8 +2213,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 587,
-      "end": 588,
+      "start": 602,
+      "end": 603,
       "loc": {
         "start": {
           "line": 21,
@@ -2239,8 +2239,8 @@
         "binop": null
       },
       "value": "prop",
-      "start": 589,
-      "end": 593,
+      "start": 604,
+      "end": 608,
       "loc": {
         "start": {
           "line": 21,
@@ -2264,8 +2264,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 593,
-      "end": 594,
+      "start": 608,
+      "end": 609,
       "loc": {
         "start": {
           "line": 21,
@@ -2289,8 +2289,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 595,
-      "end": 596,
+      "start": 610,
+      "end": 611,
       "loc": {
         "start": {
           "line": 21,
@@ -2317,8 +2317,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 603,
-      "end": 605,
+      "start": 618,
+      "end": 620,
       "loc": {
         "start": {
           "line": 22,
@@ -2342,8 +2342,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 606,
-      "end": 607,
+      "start": 621,
+      "end": 622,
       "loc": {
         "start": {
           "line": 22,
@@ -2368,8 +2368,8 @@
         "binop": null
       },
       "value": "prop",
-      "start": 607,
-      "end": 611,
+      "start": 622,
+      "end": 626,
       "loc": {
         "start": {
           "line": 22,
@@ -2396,8 +2396,8 @@
         "updateContext": null
       },
       "value": "in",
-      "start": 612,
-      "end": 614,
+      "start": 627,
+      "end": 629,
       "loc": {
         "start": {
           "line": 22,
@@ -2422,8 +2422,8 @@
         "binop": null
       },
       "value": "target",
-      "start": 615,
-      "end": 621,
+      "start": 630,
+      "end": 636,
       "loc": {
         "start": {
           "line": 22,
@@ -2447,8 +2447,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 621,
-      "end": 622,
+      "start": 636,
+      "end": 637,
       "loc": {
         "start": {
           "line": 22,
@@ -2472,8 +2472,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 623,
-      "end": 624,
+      "start": 638,
+      "end": 639,
       "loc": {
         "start": {
           "line": 22,
@@ -2500,8 +2500,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 633,
-      "end": 639,
+      "start": 648,
+      "end": 654,
       "loc": {
         "start": {
           "line": 23,
@@ -2526,8 +2526,8 @@
         "binop": null
       },
       "value": "target",
-      "start": 640,
-      "end": 646,
+      "start": 655,
+      "end": 661,
       "loc": {
         "start": {
           "line": 23,
@@ -2552,8 +2552,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 646,
-      "end": 647,
+      "start": 661,
+      "end": 662,
       "loc": {
         "start": {
           "line": 23,
@@ -2578,8 +2578,8 @@
         "binop": null
       },
       "value": "prop",
-      "start": 647,
-      "end": 651,
+      "start": 662,
+      "end": 666,
       "loc": {
         "start": {
           "line": 23,
@@ -2604,8 +2604,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 651,
-      "end": 652,
+      "start": 666,
+      "end": 667,
       "loc": {
         "start": {
           "line": 23,
@@ -2630,8 +2630,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 652,
-      "end": 653,
+      "start": 667,
+      "end": 668,
       "loc": {
         "start": {
           "line": 23,
@@ -2655,8 +2655,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 660,
-      "end": 661,
+      "start": 675,
+      "end": 676,
       "loc": {
         "start": {
           "line": 24,
@@ -2683,8 +2683,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 669,
-      "end": 675,
+      "start": 684,
+      "end": 690,
       "loc": {
         "start": {
           "line": 26,
@@ -2709,8 +2709,8 @@
         "binop": null
       },
       "value": "registry",
-      "start": 676,
-      "end": 684,
+      "start": 691,
+      "end": 699,
       "loc": {
         "start": {
           "line": 26,
@@ -2735,8 +2735,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 684,
-      "end": 685,
+      "start": 699,
+      "end": 700,
       "loc": {
         "start": {
           "line": 26,
@@ -2761,8 +2761,8 @@
         "binop": null
       },
       "value": "lookup",
-      "start": 685,
-      "end": 691,
+      "start": 700,
+      "end": 706,
       "loc": {
         "start": {
           "line": 26,
@@ -2786,8 +2786,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 691,
-      "end": 692,
+      "start": 706,
+      "end": 707,
       "loc": {
         "start": {
           "line": 26,
@@ -2812,8 +2812,8 @@
         "binop": null
       },
       "value": "prop",
-      "start": 692,
-      "end": 696,
+      "start": 707,
+      "end": 711,
       "loc": {
         "start": {
           "line": 26,
@@ -2837,8 +2837,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 696,
-      "end": 697,
+      "start": 711,
+      "end": 712,
       "loc": {
         "start": {
           "line": 26,
@@ -2863,8 +2863,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 697,
-      "end": 698,
+      "start": 712,
+      "end": 713,
       "loc": {
         "start": {
           "line": 26,
@@ -2888,8 +2888,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 703,
-      "end": 704,
+      "start": 718,
+      "end": 719,
       "loc": {
         "start": {
           "line": 27,
@@ -2913,8 +2913,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 707,
-      "end": 708,
+      "start": 722,
+      "end": 723,
       "loc": {
         "start": {
           "line": 28,
@@ -2938,8 +2938,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 708,
-      "end": 709,
+      "start": 723,
+      "end": 724,
       "loc": {
         "start": {
           "line": 28,
@@ -2964,8 +2964,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 709,
-      "end": 710,
+      "start": 724,
+      "end": 725,
       "loc": {
         "start": {
           "line": 28,
@@ -2989,8 +2989,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 711,
-      "end": 712,
+      "start": 726,
+      "end": 727,
       "loc": {
         "start": {
           "line": 29,
@@ -3004,9 +3004,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
-      "start": 714,
-      "end": 1082,
+      "value": "*\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n ",
+      "start": 729,
+      "end": 1112,
       "loc": {
         "start": {
           "line": 31,
@@ -3033,8 +3033,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1083,
-      "end": 1089,
+      "start": 1113,
+      "end": 1119,
       "loc": {
         "start": {
           "line": 46,
@@ -3061,8 +3061,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 1090,
-      "end": 1095,
+      "start": 1120,
+      "end": 1125,
       "loc": {
         "start": {
           "line": 46,
@@ -3087,8 +3087,8 @@
         "binop": null
       },
       "value": "RegistryAccess",
-      "start": 1096,
-      "end": 1110,
+      "start": 1126,
+      "end": 1140,
       "loc": {
         "start": {
           "line": 46,
@@ -3112,8 +3112,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1111,
-      "end": 1112,
+      "start": 1141,
+      "end": 1142,
       "loc": {
         "start": {
           "line": 46,
@@ -3138,8 +3138,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1115,
-      "end": 1126,
+      "start": 1145,
+      "end": 1156,
       "loc": {
         "start": {
           "line": 47,
@@ -3163,8 +3163,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1126,
-      "end": 1127,
+      "start": 1156,
+      "end": 1157,
       "loc": {
         "start": {
           "line": 47,
@@ -3188,8 +3188,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1127,
-      "end": 1128,
+      "start": 1157,
+      "end": 1158,
       "loc": {
         "start": {
           "line": 47,
@@ -3213,8 +3213,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1129,
-      "end": 1130,
+      "start": 1159,
+      "end": 1160,
       "loc": {
         "start": {
           "line": 47,
@@ -3241,8 +3241,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1135,
-      "end": 1141,
+      "start": 1165,
+      "end": 1171,
       "loc": {
         "start": {
           "line": 48,
@@ -3267,8 +3267,8 @@
         "binop": null
       },
       "value": "registerForAccess",
-      "start": 1142,
-      "end": 1159,
+      "start": 1172,
+      "end": 1189,
       "loc": {
         "start": {
           "line": 48,
@@ -3292,8 +3292,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1159,
-      "end": 1160,
+      "start": 1189,
+      "end": 1190,
       "loc": {
         "start": {
           "line": 48,
@@ -3320,8 +3320,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1160,
-      "end": 1164,
+      "start": 1190,
+      "end": 1194,
       "loc": {
         "start": {
           "line": 48,
@@ -3345,8 +3345,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1164,
-      "end": 1165,
+      "start": 1194,
+      "end": 1195,
       "loc": {
         "start": {
           "line": 48,
@@ -3371,8 +3371,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1165,
-      "end": 1166,
+      "start": 1195,
+      "end": 1196,
       "loc": {
         "start": {
           "line": 48,
@@ -3396,8 +3396,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1169,
-      "end": 1170,
+      "start": 1199,
+      "end": 1200,
       "loc": {
         "start": {
           "line": 49,
@@ -3411,9 +3411,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
-      "start": 1174,
-      "end": 1667,
+      "value": "*\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   ",
+      "start": 1204,
+      "end": 1712,
       "loc": {
         "start": {
           "line": 51,
@@ -3438,8 +3438,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 1670,
-      "end": 1676,
+      "start": 1715,
+      "end": 1721,
       "loc": {
         "start": {
           "line": 67,
@@ -3464,8 +3464,8 @@
         "binop": null
       },
       "value": "Mixin",
-      "start": 1677,
-      "end": 1682,
+      "start": 1722,
+      "end": 1727,
       "loc": {
         "start": {
           "line": 67,
@@ -3489,8 +3489,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1682,
-      "end": 1683,
+      "start": 1727,
+      "end": 1728,
       "loc": {
         "start": {
           "line": 67,
@@ -3515,8 +3515,8 @@
         "binop": null
       },
       "value": "Klass",
-      "start": 1683,
-      "end": 1688,
+      "start": 1728,
+      "end": 1733,
       "loc": {
         "start": {
           "line": 67,
@@ -3540,8 +3540,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1688,
-      "end": 1689,
+      "start": 1733,
+      "end": 1734,
       "loc": {
         "start": {
           "line": 67,
@@ -3565,8 +3565,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1690,
-      "end": 1691,
+      "start": 1735,
+      "end": 1736,
       "loc": {
         "start": {
           "line": 67,
@@ -3593,8 +3593,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1696,
-      "end": 1702,
+      "start": 1741,
+      "end": 1747,
       "loc": {
         "start": {
           "line": 68,
@@ -3621,8 +3621,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 1703,
-      "end": 1708,
+      "start": 1748,
+      "end": 1753,
       "loc": {
         "start": {
           "line": 68,
@@ -3649,8 +3649,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 1709,
-      "end": 1716,
+      "start": 1754,
+      "end": 1761,
       "loc": {
         "start": {
           "line": 68,
@@ -3675,8 +3675,8 @@
         "binop": null
       },
       "value": "Klass",
-      "start": 1717,
-      "end": 1722,
+      "start": 1762,
+      "end": 1767,
       "loc": {
         "start": {
           "line": 68,
@@ -3700,8 +3700,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1723,
-      "end": 1724,
+      "start": 1768,
+      "end": 1769,
       "loc": {
         "start": {
           "line": 68,
@@ -3726,8 +3726,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1731,
-      "end": 1742,
+      "start": 1776,
+      "end": 1787,
       "loc": {
         "start": {
           "line": 69,
@@ -3751,8 +3751,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1742,
-      "end": 1743,
+      "start": 1787,
+      "end": 1788,
       "loc": {
         "start": {
           "line": 69,
@@ -3776,8 +3776,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1743,
-      "end": 1744,
+      "start": 1788,
+      "end": 1789,
       "loc": {
         "start": {
           "line": 69,
@@ -3801,8 +3801,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1745,
-      "end": 1746,
+      "start": 1790,
+      "end": 1791,
       "loc": {
         "start": {
           "line": 69,
@@ -3829,8 +3829,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1755,
-      "end": 1760,
+      "start": 1800,
+      "end": 1805,
       "loc": {
         "start": {
           "line": 70,
@@ -3854,8 +3854,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1760,
-      "end": 1761,
+      "start": 1805,
+      "end": 1806,
       "loc": {
         "start": {
           "line": 70,
@@ -3879,8 +3879,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1761,
-      "end": 1762,
+      "start": 1806,
+      "end": 1807,
       "loc": {
         "start": {
           "line": 70,
@@ -3905,8 +3905,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1762,
-      "end": 1763,
+      "start": 1807,
+      "end": 1808,
       "loc": {
         "start": {
           "line": 70,
@@ -3933,8 +3933,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1772,
-      "end": 1778,
+      "start": 1817,
+      "end": 1823,
       "loc": {
         "start": {
           "line": 71,
@@ -3959,8 +3959,8 @@
         "binop": null
       },
       "value": "registerForAccess",
-      "start": 1779,
-      "end": 1796,
+      "start": 1824,
+      "end": 1841,
       "loc": {
         "start": {
           "line": 71,
@@ -3984,8 +3984,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1796,
-      "end": 1797,
+      "start": 1841,
+      "end": 1842,
       "loc": {
         "start": {
           "line": 71,
@@ -4012,8 +4012,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1797,
-      "end": 1801,
+      "start": 1842,
+      "end": 1846,
       "loc": {
         "start": {
           "line": 71,
@@ -4037,8 +4037,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1801,
-      "end": 1802,
+      "start": 1846,
+      "end": 1847,
       "loc": {
         "start": {
           "line": 71,
@@ -4063,8 +4063,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1802,
-      "end": 1803,
+      "start": 1847,
+      "end": 1848,
       "loc": {
         "start": {
           "line": 71,
@@ -4088,8 +4088,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1810,
-      "end": 1811,
+      "start": 1855,
+      "end": 1856,
       "loc": {
         "start": {
           "line": 72,
@@ -4113,8 +4113,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1816,
-      "end": 1817,
+      "start": 1861,
+      "end": 1862,
       "loc": {
         "start": {
           "line": 73,
@@ -4139,8 +4139,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1817,
-      "end": 1818,
+      "start": 1862,
+      "end": 1863,
       "loc": {
         "start": {
           "line": 73,
@@ -4164,8 +4164,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1821,
-      "end": 1822,
+      "start": 1866,
+      "end": 1867,
       "loc": {
         "start": {
           "line": 74,
@@ -4189,8 +4189,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1823,
-      "end": 1824,
+      "start": 1868,
+      "end": 1869,
       "loc": {
         "start": {
           "line": 75,
@@ -4215,8 +4215,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1825,
-      "end": 1825,
+      "start": 1870,
+      "end": 1870,
       "loc": {
         "start": {
           "line": 76,

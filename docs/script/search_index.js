@@ -1,20 +1,20 @@
 window.esdocSearchIndex = [
   [
-    "service-locator/lib/registry.js~registry",
+    "@alexlafroscia/service-locator/lib/registry.js~registry",
     "class/lib/registry.js~Registry.html",
-    "<span>Registry</span> <span class=\"search-result-import-path\">service-locator/lib/registry.js</span>",
+    "<span>Registry</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/registry.js</span>",
     "class"
   ],
   [
-    "service-locator/lib/index.js~registryaccess",
+    "@alexlafroscia/service-locator/lib/index.js~registryaccess",
     "class/lib/index.js~RegistryAccess.html",
-    "<span>RegistryAccess</span> <span class=\"search-result-import-path\">service-locator/lib/index.js</span>",
+    "<span>RegistryAccess</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/index.js</span>",
     "class"
   ],
   [
-    "service-locator/lib/index.js~registry",
+    "@alexlafroscia/service-locator/lib/index.js~registry",
     "variable/index.html#static-variable-registry",
-    "<span>registry</span> <span class=\"search-result-import-path\">service-locator/lib/index.js</span>",
+    "<span>registry</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/index.js</span>",
     "variable"
   ],
   [
