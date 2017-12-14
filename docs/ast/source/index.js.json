@@ -99,7 +99,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
             "start": 36,
             "end": 478,
             "loc": {
@@ -218,7 +218,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+              "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
               "start": 36,
               "end": 478,
               "loc": {
@@ -238,7 +238,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+            "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
             "start": 36,
             "end": 478,
             "loc": {
@@ -1349,7 +1349,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
       "start": 36,
       "end": 478,
       "loc": {
@@ -1532,7 +1532,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
+      "value": "*\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n ",
       "start": 36,
       "end": 478,
       "loc": {
