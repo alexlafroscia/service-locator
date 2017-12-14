@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'",
     "doc": "esdoc",
+    "doc:open": "open docs/index.html",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "pretest": "yarn build",
