@@ -1,0 +1,1005 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "lib/.external-ecmascript.js",
+    "static": true,
+    "longname": "lib/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "lib/index.js",
+    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from 'service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Setting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from 'service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from 'service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "registry",
+    "memberof": "lib/index.js",
+    "static": true,
+    "longname": "lib/index.js~registry",
+    "access": "public",
+    "export": true,
+    "importPath": "service-locator/lib/index.js",
+    "importStyle": "{registry}",
+    "description": "The instance of the registry to share between classes that inject it",
+    "examples": [
+      "<caption>Getting access to the registry</caption>\nimport { registry } from 'service-locator';",
+      "<caption>Registering a static value</caption>\nregistry.register('config', {\n  loggedIn: true\n});",
+      "<caption>Setting a value out of the registry</caption>\nconst config = registry.lookup('config');"
+    ],
+    "lineNumber": 17,
+    "type": {
+      "types": [
+        "lib/registry.js~Registry"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "registerForAccess",
+    "memberof": "lib/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/index.js~registerForAccess",
+    "access": "public",
+    "export": false,
+    "importPath": "service-locator/lib/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "RegistryAccess",
+    "memberof": "lib/index.js",
+    "static": true,
+    "longname": "lib/index.js~RegistryAccess",
+    "access": "public",
+    "export": true,
+    "importPath": "service-locator/lib/index.js",
+    "importStyle": "{RegistryAccess}",
+    "description": "",
+    "examples": [
+      "<caption>A class that accesses the registry</caption>\nimport { registry, RegistryAccess } from 'service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass SomethingWithRegistryAccess extends RegistryAccess {\n  get shouldShowAccount() {\n    return this.config.loggedIn;\n  }\n}"
+    ],
+    "lineNumber": 46,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "RegistryAccess"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "lib/index.js~RegistryAccess",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/index.js~RegistryAccess#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "Mixin",
+    "memberof": "lib/index.js~RegistryAccess",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/index.js~RegistryAccess.Mixin",
+    "access": "public",
+    "description": "Allows registry access to be mixed into some other class",
+    "examples": [
+      "<caption>Extending a base class and gaining registry access</caption>\nimport { RegistryAccess } from 'service-locator';\n\nclass Foo {\n  constructor() {\n    ...\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}"
+    ],
+    "lineNumber": 67,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "T"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "Klass",
+        "description": "the base class to extend"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "RegistryAccess<T>"
+      ],
+      "spread": false,
+      "description": "the base class with the registry access mixed in"
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "lib/registry.js",
+    "content": "/**\n * Holds onto references to the items in the registry\n *\n * Also stores metadata about the things stored\n *\n * @class Registry\n */\nexport default class Registry {\n  constructor() {\n    this.reset();\n  }\n\n  /**\n   * Set some value with the given identifier in the registry\n   *\n   * @method register\n   * @param {string} key the identifier\n   * @param {*} value the value to set there\n   */\n  register(key, value) {\n    this._registry.set(key, value);\n  }\n\n  /**\n   * Returns the value for a given registered key\n   *\n   * @method lookup\n   * @param {string} key\n   * @return {*} the thing that was registered\n   */\n  lookup(key) {\n    return this._registry.get(key);\n  }\n\n  /**\n   * Resets the registry back to an empty state\n   *\n   * @method reset\n   */\n  reset() {\n    this._registry = new Map();\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/registry.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "class",
+    "name": "Registry",
+    "memberof": "lib/registry.js",
+    "static": true,
+    "longname": "lib/registry.js~Registry",
+    "access": "public",
+    "export": true,
+    "importPath": "service-locator/lib/registry.js",
+    "importStyle": "Registry",
+    "description": "Holds onto references to the items in the registry\n\nAlso stores metadata about the things stored",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Registry"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "lib/registry.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/registry.js~Registry#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "register",
+    "memberof": "lib/registry.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/registry.js~Registry#register",
+    "access": "public",
+    "description": "Set some value with the given identifier in the registry",
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "register"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "the identifier"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "the value to set there"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "lookup",
+    "memberof": "lib/registry.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/registry.js~Registry#lookup",
+    "access": "public",
+    "description": "Returns the value for a given registered key",
+    "lineNumber": 31,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "lookup"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "the thing that was registered"
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "reset",
+    "memberof": "lib/registry.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/registry.js~Registry#reset",
+    "access": "public",
+    "description": "Resets the registry back to an empty state",
+    "lineNumber": 40,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "reset"
+      }
+    ],
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "_registry",
+    "memberof": "lib/registry.js~Registry",
+    "static": false,
+    "longname": "lib/registry.js~Registry#_registry",
+    "access": "private",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# service-locator\n\nA JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.\n\n## Why?\n\nI've struggled with making a complex set of components using [Skate.js][skate] where all components needed access to some state. I didn't want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I'm used to with [Ember.js][ember]. So, I started messing around with this.\n\n## Should I use this?\n\nProbably not. In reality, it's not that different than just accessing everything off the `window`, and we all know that's a bad idea. It's more just an idea that I'm messing around with.\n\n## Prior Art\n\n- [Ember.js service injection][ember service injection]\n\n[service locator pattern]: https://martinfowler.com/articles/injection.html\n[skate]: https://github.com/skatejs/skatejs\n[ember]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[ember service injection]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n",
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"service-locator\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Serice locator pattern for ES6 classes\",\n  \"main\": \"dist/index.js\",\n  \"license\": \"MIT\",\n  \"module\": \"lib/index.js\",\n  \"files\": [\n    \"dist\",\n    \"lib\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'\",\n    \"doc\": \"esdoc\",\n    \"lint\": \"eslint .\",\n    \"lint:fix\": \"eslint --fix .\",\n    \"pretest\": \"yarn build\",\n    \"test\": \"ava\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.24.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.13.1\",\n    \"eslint-config-prettier\": \"^2.9.0\",\n    \"eslint-plugin-prettier\": \"^2.3.1\",\n    \"faker\": \"^4.1.0\",\n    \"prettier\": \"^1.9.2\",\n    \"rollup\": \"^0.52.1\"\n  }\n}\n",
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 61,
+    "kind": "testFile",
+    "name": "test/access-test.js",
+    "content": "import test from 'ava';\nimport { RegistryAccess, registry } from '../dist';\n\ntest.beforeEach(() => {\n  registry.register('foo', 'bar');\n});\n\n/** @test {RegistryAccess} */\ntest('can define a class that looks something up in the registry', t => {\n  class Foo extends RegistryAccess {}\n\n  const instance = new Foo();\n  t.is(instance.foo, 'bar');\n  t.pass(instance instanceof Foo);\n});\n\n/** @test {RegistryAccess.Mixin} */\ntest('can extend a base class and provide registry access', t => {\n  class Base {\n    constructor() {\n      this.baseProperty = 'baseProperty';\n    }\n  }\n\n  class ExtendedBase extends RegistryAccess.Mixin(Base) {}\n\n  const instance = new ExtendedBase();\n  t.is(instance.foo, 'bar');\n  t.is(instance.baseProperty, 'baseProperty');\n  t.pass(instance instanceof ExtendedBase);\n});\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/test/access-test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "test",
+    "name": "test0",
+    "testId": 0,
+    "memberof": "test/access-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/access-test.js~test0",
+    "access": null,
+    "description": "can define a class that looks something up in the registry",
+    "lineNumber": 9,
+    "testTargets": [
+      "RegistryAccess"
+    ]
+  },
+  {
+    "__docId__": 63,
+    "kind": "test",
+    "name": "test1",
+    "testId": 1,
+    "memberof": "test/access-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/access-test.js~test1",
+    "access": null,
+    "description": "can extend a base class and provide registry access",
+    "lineNumber": 18,
+    "testTargets": [
+      "RegistryAccess.Mixin"
+    ]
+  },
+  {
+    "__docId__": 64,
+    "kind": "testFile",
+    "name": "test/registry-test.js",
+    "content": "import test from 'ava';\nimport faker from 'faker';\nimport { registry } from '../dist';\n\ntest.afterEach(() => {\n  registry.reset();\n});\n\n/** @test {Registry.register} */\ntest('it can register a value at a key', t => {\n  const value = faker.lorem.word();\n  registry.register('foo', value);\n\n  t.is(registry.lookup('foo'), value);\n});\n\n/** @test {Registry.register} */\ntest('it can overwrite a value at a key', t => {\n  const original = faker.lorem.word();\n  const newValue = faker.lorem.word();\n\n  registry.register('foo', original);\n  registry.register('foo', newValue);\n\n  t.is(registry.lookup('foo'), newValue);\n});\n\n/** @test {Registry.lookup} */\ntest('it returns `undefined` when a key has not been registered', t => {\n  t.is(registry.lookup('foo'), undefined);\n});\n\n/** @test {Registry.reset} */\ntest('it can reset the registry', t => {\n  const value = faker.lorem.word();\n\n  registry.register('foo', value);\n  registry.reset();\n\n  t.is(registry.lookup('foo'), undefined);\n});\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/test/registry-test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "test",
+    "name": "test2",
+    "testId": 2,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test2",
+    "access": null,
+    "description": "it can register a value at a key",
+    "lineNumber": 10,
+    "testTargets": [
+      "Registry.register"
+    ]
+  },
+  {
+    "__docId__": 66,
+    "kind": "test",
+    "name": "test3",
+    "testId": 3,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test3",
+    "access": null,
+    "description": "it can overwrite a value at a key",
+    "lineNumber": 18,
+    "testTargets": [
+      "Registry.register"
+    ]
+  },
+  {
+    "__docId__": 67,
+    "kind": "test",
+    "name": "test4",
+    "testId": 4,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test4",
+    "access": null,
+    "description": "it returns `undefined` when a key has not been registered",
+    "lineNumber": 29,
+    "testTargets": [
+      "Registry.lookup"
+    ]
+  },
+  {
+    "__docId__": 68,
+    "kind": "test",
+    "name": "test5",
+    "testId": 5,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test5",
+    "access": null,
+    "description": "it can reset the registry",
+    "lineNumber": 34,
+    "testTargets": [
+      "Registry.reset"
+    ]
+  }
+]

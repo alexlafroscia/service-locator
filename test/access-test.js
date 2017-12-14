@@ -5,6 +5,7 @@ test.beforeEach(() => {
   registry.register('foo', 'bar');
 });
 
+/** @test {RegistryAccess} */
 test('can define a class that looks something up in the registry', t => {
   class Foo extends RegistryAccess {}
 
@@ -13,6 +14,7 @@ test('can define a class that looks something up in the registry', t => {
   t.pass(instance instanceof Foo);
 });
 
+/** @test {RegistryAccess.Mixin} */
 test('can extend a base class and provide registry access', t => {
   class Base {
     constructor() {
