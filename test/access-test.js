@@ -1,5 +1,5 @@
 import test from 'ava';
-import { RegistryAccess, registry } from '../lib';
+import { RegistryAccess, registry } from '../dist';
 
 test.beforeEach(() => {
   registry.register('foo', 'bar');
@@ -20,7 +20,7 @@ test('can extend a base class and provide registry access', t => {
     }
   }
 
-  class ExtendedBase extends RegistryAccess.extend(Base) {}
+  class ExtendedBase extends RegistryAccess.Mixin(Base) {}
 
   const instance = new ExtendedBase();
   t.is(instance.foo, 'bar');
