@@ -37,8 +37,65 @@
 </nav>
 
 <div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-alexlafroscia-service-locator">@alexlafroscia/service-locator</h1><p>A JS implementation of the <a href="https://martinfowler.com/articles/injection.html">Service Locator pattern</a> for ES6 classes.</p>
+<h2 id="features">Features</h2><ul>
+<li>Store commonly-needed values in a single place, allowing easy access to shared state</li>
+<li>Inject registry access into any ES6 class through a mixin, or extend the provided ES6 class</li>
+<li>Easily provide stubs for objects in the registry to simplify testing</li>
+</ul>
+<h2 id="a-quick-example">A quick example</h2><p>Imagine we have a component that should check if the user is logged in and either prompt for login, or greet the user. We have two parts: fetching the user data, and the component itself.</p>
+<p>If you were to use this package, here is how the code might be set up (note that I&apos;m using a fake Component implementation that is something similar to React or Preact):</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { registry, RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
+
+class UserService {
+  fetchUserInfo() {
+    return fetch(&apos;...&apos;).then(res =&gt; res.json());
+  }
+
+  async isLoggedIn() {
+    const { isLoggedIn } = await this.fetch(&apos;...&apos;);
+
+    return isLoggedin;
+  }
+};
+
+registry.register(&apos;userService&apos;, new UserService());
+
+export default class LoggedInComponent extends RegistryAccess.Mixin(Component) {
+  async getInitialState() {
+    const isLoggedIn = this.userService.isLoggedIn();
+    this.setState({ isLoggedIn });
+  }
+
+  render({ isLoggedIn }) {
+    return isLoggedIn ? &apos;Hello!&apos; : &apos;Please log in!&apos;;
+  }
+}</code>
+</code></pre>
+<p>What&apos;s the benefit here? For one, we&apos;ve separated out the thing that fetches the data from the thing that displays it, which is always a good idea. Additionally, we made it easy to stub the data fetching in a test:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">test(&apos;shows the right thing when the user is logged in&apos;, () =&gt; {
+  registry.stub(&apos;userService&apos;, {
+    async fetchUserInfo() {
+      return { isLoggedIn: true };
+    }
+  });
+
+  const result = render(&lt;Component /&gt;);
+  expect(result).to.contain(&apos;Hello!&apos;);
+});
+
+test(&apos;shows the right thing when the user is not logged in&apos;, () =&gt; {
+  registry.stub(&apos;userService&apos;, {
+    async fetch() {
+      return { isLoggedIn: false };
+    }
+  });
+
+  const result = render(&lt;Component /&gt;);
+  expect(result).to.contain(&apos;Please log in!&apos;);
+});</code>
+</code></pre>
 <h2 id="why-">Why?</h2><p>I&apos;ve struggled with making a complex set of components using <a href="https://github.com/skatejs/skatejs">Skate.js</a> where all components needed access to some state. I didn&apos;t want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I&apos;m used to with <a href="https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject">Ember.js</a>. So, I started messing around with this.</p>
-<h2 id="should-i-use-this-">Should I use this?</h2><p>Probably not. In reality, it&apos;s not that different than just accessing everything off the <code>window</code>, and we all know that&apos;s a bad idea (although this works in a Node environment where <code>window</code> isn&apos;t available, and is built for use with JavaScript modules where there isn&apos;t a shared global context). It&apos;s more just an idea that I&apos;m messing around with.</p>
+<h2 id="should-i-use-this-">Should I use this?</h2><p>Maybe. In reality, it&apos;s not that different than just accessing everything off the <code>window</code>, and we all know that&apos;s a bad idea (although this works in a Node environment where <code>window</code> isn&apos;t available, and is built for use with JavaScript modules where there isn&apos;t a shared global context).</p>
 <h2 id="compatibility-notes">Compatibility Notes</h2><p>This package is meant to be consumed in an ES6 environment. It relies on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a> and is built with ES6 classes in mind. Make sure your environment can handle this.</p>
 <h2 id="prior-art">Prior Art</h2><ul>
 <li><a href="https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject">Ember.js service injection</a></li>
