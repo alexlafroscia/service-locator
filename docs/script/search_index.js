@@ -60,6 +60,30 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
+    "registry.stub lib/registry.js~registry#stub,registry.stub",
+    "test-file/test/stub-test.js.html#lineNumber44",
+    "it can stub an object's methods",
+    "test"
+  ],
+  [
+    "registry.stub lib/registry.js~registry#stub,registry.stub",
+    "test-file/test/stub-test.js.html#lineNumber26",
+    "it can stub an object's values",
+    "test"
+  ],
+  [
+    "registry.stub lib/registry.js~registry#stub,registry.stub",
+    "test-file/test/stub-test.js.html#lineNumber18",
+    "it fails to stub a number",
+    "test"
+  ],
+  [
+    "registry.stub lib/registry.js~registry#stub,registry.stub",
+    "test-file/test/stub-test.js.html#lineNumber10",
+    "it fails to stub a string",
+    "test"
+  ],
+  [
     "registryaccess lib/index.js~registryaccess,registryaccess",
     "test-file/test/getting-properties-test.js.html#lineNumber33",
     "it ignores non-string property access",
@@ -408,6 +432,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "lib/registry.js~registry#stub",
+    "class/lib/registry.js~Registry.html#instance-method-stub",
+    "lib/registry.js~Registry#stub",
+    "method"
+  ],
+  [
     "test/access-test.js",
     "test-file/test/access-test.js.html",
     "test/access-test.js",
@@ -423,6 +453,12 @@ window.esdocSearchIndex = [
     "test/registry-test.js",
     "test-file/test/registry-test.js.html",
     "test/registry-test.js",
+    "testFile"
+  ],
+  [
+    "test/stub-test.js",
+    "test-file/test/stub-test.js.html",
+    "test/stub-test.js",
     "testFile"
   ]
 ]
