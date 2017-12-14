@@ -15,6 +15,7 @@
     "doc:open": "open docs/index.html",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "prepublish": "yarn build",
     "pretest": "yarn build",
     "test": "ava"
   },
