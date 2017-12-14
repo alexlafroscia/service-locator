@@ -30,6 +30,18 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
+    "registryaccess lib/index.js~registryaccess,registryaccess",
+    "test-file/test/getting-properties-test.js.html#lineNumber17",
+    "it can access nested properties in a registered value",
+    "test"
+  ],
+  [
+    "registryaccess lib/index.js~registryaccess,registryaccess",
+    "test-file/test/getting-properties-test.js.html#lineNumber24",
+    "it can access properties by building a string",
+    "test"
+  ],
+  [
     "registry.register lib/registry.js~registry#register,registry.register",
     "test-file/test/registry-test.js.html#lineNumber18",
     "it can overwrite a value at a key",
@@ -45,6 +57,12 @@ window.esdocSearchIndex = [
     "registry.reset lib/registry.js~registry#reset,registry.reset",
     "test-file/test/registry-test.js.html#lineNumber34",
     "it can reset the registry",
+    "test"
+  ],
+  [
+    "registryaccess lib/index.js~registryaccess,registryaccess",
+    "test-file/test/getting-properties-test.js.html#lineNumber33",
+    "it ignores non-string property access",
     "test"
   ],
   [
@@ -393,6 +411,12 @@ window.esdocSearchIndex = [
     "test/access-test.js",
     "test-file/test/access-test.js.html",
     "test/access-test.js",
+    "testFile"
+  ],
+  [
+    "test/getting-properties-test.js",
+    "test-file/test/getting-properties-test.js.html",
+    "test/getting-properties-test.js",
     "testFile"
   ],
   [

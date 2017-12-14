@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="">
-  <title data-ice="title">Source | @alexlafroscia/service-locator</title>
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">test/getting-properties-test.js | @alexlafroscia/service-locator</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -36,40 +36,46 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">7/11</span></h1>
+<div class="content" data-ice="content"><h1 data-ice="title">test/getting-properties-test.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import test from &apos;ava&apos;;
+import { RegistryAccess, registry } from &apos;../dist&apos;;
 
-<table class="files-summary" data-ice="files" data-use-coverage="true">
-  <thead>
-    <tr>
-      <td>File</td>
-      <td>Identifier</td>
-      <td class="coverage">Document</td>
-      <td style="display: none;">Size</td>
-      <td style="display: none;">Lines</td>
-      <td style="display: none;">Updated</td>
-    </tr>
-  </thead>
-  <tbody>
-    
-  <tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/lib/index.js.html#errorLines=19,47">lib/index.js</a></span></td>
-      <td data-ice="identifier" class="identifiers"><span><a href="class/lib/index.js~RegistryAccess.html">RegistryAccess</a></span>
-<span><a href="variable/index.html#static-variable-registry">registry</a></span></td>
-      <td class="coverage"><span data-ice="coverage">60 %</span><span data-ice="coverageCount" class="coverage-count">3/5</span></td>
-      <td style="display: none;" data-ice="size">1870 byte</td>
-      <td style="display: none;" data-ice="lines">75</td>
-      <td style="display: none;" data-ice="updated">2017-12-05 01:40:52 (UTC)</td>
-    </tr>
-<tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/lib/registry.js.html#errorLines=41,9">lib/registry.js</a></span></td>
-      <td data-ice="identifier" class="identifiers"><span><a href="class/lib/registry.js~Registry.html">Registry</a></span></td>
-      <td class="coverage"><span data-ice="coverage">66 %</span><span data-ice="coverageCount" class="coverage-count">4/6</span></td>
-      <td style="display: none;" data-ice="size">810 byte</td>
-      <td style="display: none;" data-ice="lines">43</td>
-      <td style="display: none;" data-ice="updated">2017-12-05 01:26:10 (UTC)</td>
-    </tr>
-</tbody>
-</table>
+test.beforeEach(t =&gt; {
+  t.context.instance = new RegistryAccess();
+
+  registry.register(&apos;config&apos;, {
+    loggedIn: true
+  });
+});
+
+test.afterEach(() =&gt; {
+  registry.reset();
+});
+
+/** @test {RegistryAccess} */
+test(&apos;it can access nested properties in a registered value&apos;, t =&gt; {
+  const { instance } = t.context;
+
+  t.is(instance.config.loggedIn, true);
+});
+
+/** @test {RegistryAccess} */
+test(&apos;it can access properties by building a string&apos;, t =&gt; {
+  const { instance } = t.context;
+
+  t.deepEqual(instance[&apos;config&apos;], {
+    loggedIn: true
+  });
+});
+
+/** @test {RegistryAccess} */
+test(&apos;it ignores non-string property access&apos;, t =&gt; {
+  const { instance } = t.context;
+
+  t.is(instance[0], undefined);
+});
+</code></pre>
+
 </div>
 
 <footer class="footer">
