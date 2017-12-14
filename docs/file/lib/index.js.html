@@ -68,6 +68,11 @@ function registerForAccess(context) {
 }
 
 /**
+ * Provides registry access to the instance
+ *
+ * This class can either be extended from directly, or mixed in using
+ * `RegistryAccess.Mixin`.
+ *
  * @class RegistryAccess
  * @example &lt;caption&gt;A class that accesses the registry&lt;/caption&gt;
  * import { registry, RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
@@ -93,15 +98,23 @@ export class RegistryAccess {
    * @param {T} Klass the base class to extend
    * @return {RegistryAccess&lt;T&gt;} the base class with the registry access mixed in
    * @example &lt;caption&gt;Extending a base class and gaining registry access&lt;/caption&gt;
-   * import { RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
+   * import { registry, RegistryAccess } from &apos;@alexlafroscia/service-locator&apos;;
+   *
+   * registry.register(&apos;config&apos;, {
+   *   loggedIn: true
+   * });
    *
    * class Foo {
    *   constructor() {
-   *     ...
+   *     this.baseClassProperty = &apos;foo&apos;;
    *   }
    * }
    *
    * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}
+   *
+   * const instance = new FooWithRegistryAccess();
+   * instance.baseClassProperty === &apos;foo&apos;;
+   * instance.config.loggedIn === true;
    */
   static Mixin(Klass) {
     return class extends Klass {

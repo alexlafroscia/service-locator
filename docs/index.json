@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "lib/index.js",
-    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * class Foo {\n   *   constructor() {\n   *     ...\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
+    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * Provides registry access to the instance\n *\n * This class can either be extended from directly, or mixed in using\n * `RegistryAccess.Mixin`.\n *\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * registry.register('config', {\n   *   loggedIn: true\n   * });\n   *\n   * class Foo {\n   *   constructor() {\n   *     this.baseClassProperty = 'foo';\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   *\n   * const instance = new FooWithRegistryAccess();\n   * instance.baseClassProperty === 'foo';\n   * instance.config.loggedIn === true;\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
     "static": true,
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/index.js",
     "access": "public",
@@ -640,11 +640,11 @@
     "export": true,
     "importPath": "@alexlafroscia/service-locator/lib/index.js",
     "importStyle": "{RegistryAccess}",
-    "description": "",
+    "description": "Provides registry access to the instance\n\nThis class can either be extended from directly, or mixed in using\n`RegistryAccess.Mixin`.",
     "examples": [
       "<caption>A class that accesses the registry</caption>\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass SomethingWithRegistryAccess extends RegistryAccess {\n  get shouldShowAccount() {\n    return this.config.loggedIn;\n  }\n}"
     ],
-    "lineNumber": 46,
+    "lineNumber": 51,
     "unknown": [
       {
         "tagName": "@class",
@@ -664,7 +664,7 @@
     "longname": "lib/index.js~RegistryAccess#constructor",
     "access": "public",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 52,
     "undocument": true
   },
   {
@@ -679,9 +679,9 @@
     "access": "public",
     "description": "Allows registry access to be mixed into some other class",
     "examples": [
-      "<caption>Extending a base class and gaining registry access</caption>\nimport { RegistryAccess } from '@alexlafroscia/service-locator';\n\nclass Foo {\n  constructor() {\n    ...\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}"
+      "<caption>Extending a base class and gaining registry access</caption>\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass Foo {\n  constructor() {\n    this.baseClassProperty = 'foo';\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n\nconst instance = new FooWithRegistryAccess();\ninstance.baseClassProperty === 'foo';\ninstance.config.loggedIn === true;"
     ],
-    "lineNumber": 67,
+    "lineNumber": 80,
     "params": [
       {
         "nullable": null,
