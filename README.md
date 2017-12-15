@@ -1,5 +1,7 @@
 # @alexlafroscia/service-locator
 
+[![Build Status](https://travis-ci.org/alexlafroscia/service-locator.svg?branch=master)](https://travis-ci.org/alexlafroscia/service-locator)
+
 A JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.
 
 ## Features
