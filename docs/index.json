@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "lib/index.js",
-    "content": "import Registry from './registry';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * Provides registry access to the instance\n *\n * This class can either be extended from directly, or mixed in using\n * `RegistryAccess.Mixin`.\n *\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * registry.register('config', {\n   *   loggedIn: true\n   * });\n   *\n   * class Foo {\n   *   constructor() {\n   *     this.baseClassProperty = 'foo';\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   *\n   * const instance = new FooWithRegistryAccess();\n   * instance.baseClassProperty === 'foo';\n   * instance.config.loggedIn === true;\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
+    "content": "import Registry from './registry';\nexport { default as inject, injectLookup } from './inject';\n\n/**\n * The instance of the registry to share between classes that inject it\n *\n * @example <caption>Getting access to the registry</caption>\n * import { registry } from '@alexlafroscia/service-locator';\n *\n * @example <caption>Registering a static value</caption>\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * @example <caption>Getting a value out of the registry</caption>\n * const config = registry.lookup('config');\n */\nexport const registry = new Registry();\n\nfunction registerForAccess(context) {\n  return new Proxy(context, {\n    get(target, prop) {\n      if (prop in target) {\n        return target[prop];\n      }\n\n      return registry.lookup(prop);\n    }\n  });\n}\n\n/**\n * Provides registry access to the instance\n *\n * This class can either be extended from directly, or mixed in using\n * `RegistryAccess.Mixin`.\n *\n * @class RegistryAccess\n * @example <caption>A class that accesses the registry</caption>\n * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class SomethingWithRegistryAccess extends RegistryAccess {\n *   get shouldShowAccount() {\n *     return this.config.loggedIn;\n *   }\n * }\n */\nexport class RegistryAccess {\n  constructor() {\n    return registerForAccess(this);\n  }\n\n  /**\n   * Allows registry access to be mixed into some other class\n   *\n   * @param {T} Klass the base class to extend\n   * @return {RegistryAccess<T>} the base class with the registry access mixed in\n   * @example <caption>Extending a base class and gaining registry access</caption>\n   * import { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n   *\n   * registry.register('config', {\n   *   loggedIn: true\n   * });\n   *\n   * class Foo {\n   *   constructor() {\n   *     this.baseClassProperty = 'foo';\n   *   }\n   * }\n   *\n   * class FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n   *\n   * const instance = new FooWithRegistryAccess();\n   * instance.baseClassProperty === 'foo';\n   * instance.config.loggedIn === true;\n   */\n  static Mixin(Klass) {\n    return class extends Klass {\n      constructor() {\n        super();\n        return registerForAccess(this);\n      }\n    };\n  }\n}\n",
     "static": true,
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/index.js",
     "access": "public",
@@ -591,7 +591,7 @@
       "<caption>Registering a static value</caption>\nregistry.register('config', {\n  loggedIn: true\n});",
       "<caption>Getting a value out of the registry</caption>\nconst config = registry.lookup('config');"
     ],
-    "lineNumber": 17,
+    "lineNumber": 18,
     "type": {
       "types": [
         "lib/registry.js~Registry"
@@ -612,7 +612,7 @@
     "importPath": "@alexlafroscia/service-locator/lib/index.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 19,
+    "lineNumber": 20,
     "undocument": true,
     "params": [
       {
@@ -644,7 +644,7 @@
     "examples": [
       "<caption>A class that accesses the registry</caption>\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass SomethingWithRegistryAccess extends RegistryAccess {\n  get shouldShowAccount() {\n    return this.config.loggedIn;\n  }\n}"
     ],
-    "lineNumber": 51,
+    "lineNumber": 52,
     "unknown": [
       {
         "tagName": "@class",
@@ -664,7 +664,7 @@
     "longname": "lib/index.js~RegistryAccess#constructor",
     "access": "public",
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 53,
     "undocument": true
   },
   {
@@ -681,7 +681,7 @@
     "examples": [
       "<caption>Extending a base class and gaining registry access</caption>\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass Foo {\n  constructor() {\n    this.baseClassProperty = 'foo';\n  }\n}\n\nclass FooWithRegistryAccess extends RegistryAccess.Mixin(Foo) {}\n\nconst instance = new FooWithRegistryAccess();\ninstance.baseClassProperty === 'foo';\ninstance.config.loggedIn === true;"
     ],
-    "lineNumber": 80,
+    "lineNumber": 81,
     "params": [
       {
         "nullable": null,
@@ -706,6 +706,120 @@
   {
     "__docId__": 54,
     "kind": "file",
+    "name": "lib/inject.js",
+    "content": "import { registry } from './index';\n\nfunction lookup(key) {\n  return {\n    get() {\n      return registry.lookup(key);\n    }\n  };\n}\n\n/**\n * Injects something off the registry, using the name of the property\n *\n * To be used as a property decorator\n * Requires `babel-plugin-transform-decorators-legacy`.\n *\n * @experimental It depends on a Babel transform that is not yet stage 4\n * @example <caption>Injecting registry access into a class</caption>\n * import { registry, inject } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class Foo {\n *   \\@inject config;\n * }\n *\n * const instance = new Foo();\n * instance.config.loggedIn; // true\n */\nexport default function inject(target, key) {\n  return lookup(key);\n}\n\n/**\n * Injects something off the registry, using an alternate name\n *\n * To be used as a property decorator.\n * Requires `babel-plugin-transform-decorators-legacy`.\n *\n * @experimental It depends on a Babel transform that is not yet stage 4\n * @example <caption>Injecting registry access into a class</caption>\n * import { registry, injectLookup } from '@alexlafroscia/service-locator';\n *\n * registry.register('config', {\n *   loggedIn: true\n * });\n *\n * class Foo {\n *   \\@inject.lookup('config') userSessionConfig\n * }\n *\n * const instance = new Foo();\n * instance.userSessionConfig.loggedIn; // true\n */\nexport function injectLookup(registryKey) {\n  return function() {\n    return lookup(registryKey);\n  };\n}\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/lib/inject.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "lookup",
+    "memberof": "lib/inject.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/inject.js~lookup",
+    "access": "public",
+    "export": false,
+    "importPath": "@alexlafroscia/service-locator/lib/inject.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "inject",
+    "memberof": "lib/inject.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/inject.js~inject",
+    "access": "public",
+    "export": true,
+    "importPath": "@alexlafroscia/service-locator/lib/inject.js",
+    "importStyle": "inject",
+    "description": "Injects something off the registry, using the name of the property\n\nTo be used as a property decorator\nRequires `babel-plugin-transform-decorators-legacy`.",
+    "examples": [
+      "<caption>Injecting registry access into a class</caption>\nimport { registry, inject } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass Foo {\n  \\@inject config;\n}\n\nconst instance = new Foo();\ninstance.config.loggedIn; // true"
+    ],
+    "lineNumber": 32,
+    "experimental": "It depends on a Babel transform that is not yet stage 4",
+    "params": [
+      {
+        "name": "target",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "injectLookup",
+    "memberof": "lib/inject.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "lib/inject.js~injectLookup",
+    "access": "public",
+    "export": true,
+    "importPath": "@alexlafroscia/service-locator/lib/inject.js",
+    "importStyle": "{injectLookup}",
+    "description": "Injects something off the registry, using an alternate name\n\nTo be used as a property decorator.\nRequires `babel-plugin-transform-decorators-legacy`.",
+    "examples": [
+      "<caption>Injecting registry access into a class</caption>\nimport { registry, injectLookup } from '@alexlafroscia/service-locator';\n\nregistry.register('config', {\n  loggedIn: true\n});\n\nclass Foo {\n  \\@inject.lookup('config') userSessionConfig\n}\n\nconst instance = new Foo();\ninstance.userSessionConfig.loggedIn; // true"
+    ],
+    "lineNumber": 57,
+    "experimental": "It depends on a Babel transform that is not yet stage 4",
+    "params": [
+      {
+        "name": "registryKey",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
     "name": "lib/registry.js",
     "content": "const PRIMITIVE_TYPES = ['string', 'number'];\n\n/**\n * Holds onto references to the items in the registry\n *\n * Also stores metadata about the things stored\n *\n * @class Registry\n */\nexport default class Registry {\n  constructor() {\n    this.reset();\n  }\n\n  /**\n   * Set some value with the given identifier in the registry\n   *\n   * @method register\n   * @param {string} key the identifier\n   * @param {*} value the value to set there\n   */\n  register(key, value) {\n    this._registry.set(key, value);\n  }\n\n  /**\n   * Partially replace a value in the registry\n   *\n   * One of the nice features of using the registry is that it allows easy\n   * injection of test stubs. However, it's often annoying to make sure that\n   * the stub has all of the properties and methods that the code may require\n   * when you really only want to replace one thing.\n   *\n   * This method allows you to supply a replacement that _only_ replaces the\n   * provided properties and methods, leaving everything else in tact.\n   *\n   * @method stub\n   * @param {string} key the identifier\n   * @param {object} config the properties and methods to replace\n   * @return {*} the stubbed version of the original object\n   * @example <caption>Replacing a property on an object</caption>\n   * registry.register('session', {\n   *   loggedIn: true\n   * });\n   * registry.stub('session', { loggedIn: false });\n   * registry.lookup('session').loggedIn; // false\n   *\n   * @example <caption>Stubbed a method that fetches data</caption>\n   * registry.register('userService', {\n   *   userName() {\n   *     return this.fetch().then(res => res.name);\n   *   },\n   *   fetch() {\n   *     return fetch(...).then(res => res.json());\n   *   }\n   * });\n   * registry.stub('userService', {\n   *   async fetch() {\n   *     return { name: 'Alex' };\n   *   }\n   * });\n   *\n   * registry.lookup('userService').userName(); // Resolves to `Alex`\n   */\n  stub(key, config) {\n    const value = this.lookup(key);\n\n    if (PRIMITIVE_TYPES.includes(typeof value)) {\n      throw new Error(\n        `You cannot stub a value of type ${typeof value}. Register an alternate value instead`\n      );\n    }\n\n    const stubbedValue = new Proxy(value, {\n      get(target, prop) {\n        if (prop in config) {\n          return config[prop];\n        }\n\n        return target[prop];\n      }\n    });\n\n    this.register(key, stubbedValue);\n\n    return stubbedValue;\n  }\n\n  /**\n   * Returns the value for a given registered key\n   *\n   * @method lookup\n   * @param {string} key\n   * @return {*} the thing that was registered\n   */\n  lookup(key) {\n    return this._registry.get(key);\n  }\n\n  /**\n   * Resets the registry back to an empty state\n   *\n   * @method reset\n   */\n  reset() {\n    this._registry = new Map();\n  }\n}\n",
     "static": true,
@@ -715,7 +829,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 59,
     "kind": "variable",
     "name": "PRIMITIVE_TYPES",
     "memberof": "lib/registry.js",
@@ -736,7 +850,7 @@
     "ignore": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 60,
     "kind": "class",
     "name": "Registry",
     "memberof": "lib/registry.js",
@@ -757,7 +871,7 @@
     "interface": false
   },
   {
-    "__docId__": 57,
+    "__docId__": 61,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "lib/registry.js~Registry",
@@ -771,7 +885,7 @@
     "undocument": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 62,
     "kind": "method",
     "name": "register",
     "memberof": "lib/registry.js~Registry",
@@ -813,7 +927,7 @@
     "return": null
   },
   {
-    "__docId__": 59,
+    "__docId__": 63,
     "kind": "method",
     "name": "stub",
     "memberof": "lib/registry.js~Registry",
@@ -866,7 +980,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 64,
     "kind": "method",
     "name": "lookup",
     "memberof": "lib/registry.js~Registry",
@@ -905,7 +1019,7 @@
     }
   },
   {
-    "__docId__": 61,
+    "__docId__": 65,
     "kind": "method",
     "name": "reset",
     "memberof": "lib/registry.js~Registry",
@@ -926,7 +1040,7 @@
     "return": null
   },
   {
-    "__docId__": 62,
+    "__docId__": 66,
     "kind": "member",
     "name": "_registry",
     "memberof": "lib/registry.js~Registry",
@@ -944,7 +1058,7 @@
   },
   {
     "kind": "index",
-    "content": "# @alexlafroscia/service-locator\n\nA JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.\n\n## Features\n\n- Store commonly-needed values in a single place, allowing easy access to shared state\n- Inject registry access into any ES6 class through a mixin, or extend the provided ES6 class\n- Easily provide stubs for objects in the registry to simplify testing\n\n## A quick example\n\nImagine we have a component that should check if the user is logged in and either prompt for login, or greet the user. We have two parts: fetching the user data, and the component itself.\n\nIf you were to use this package, here is how the code might be set up (note that I'm using a fake Component implementation that is something similar to React or Preact):\n\n```javascript\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nclass UserService {\n  fetchUserInfo() {\n    return fetch('...').then(res => res.json());\n  }\n\n  async isLoggedIn() {\n    const { isLoggedIn } = await this.fetch('...');\n\n    return isLoggedin;\n  }\n};\n\nregistry.register('userService', new UserService());\n\nexport default class LoggedInComponent extends RegistryAccess.Mixin(Component) {\n  async getInitialState() {\n    const isLoggedIn = this.userService.isLoggedIn();\n    this.setState({ isLoggedIn });\n  }\n\n  render({ isLoggedIn }) {\n    return isLoggedIn ? 'Hello!' : 'Please log in!';\n  }\n}\n```\n\nWhat's the benefit here? For one, we've separated out the thing that fetches the data from the thing that displays it, which is always a good idea. Additionally, we made it easy to stub the data fetching in a test:\n\n```javascript\ntest('shows the right thing when the user is logged in', () => {\n  registry.stub('userService', {\n    async fetchUserInfo() {\n      return { isLoggedIn: true };\n    }\n  });\n\n  const result = render(<Component />);\n  expect(result).to.contain('Hello!');\n});\n\ntest('shows the right thing when the user is not logged in', () => {\n  registry.stub('userService', {\n    async fetch() {\n      return { isLoggedIn: false };\n    }\n  });\n\n  const result = render(<Component />);\n  expect(result).to.contain('Please log in!');\n});\n```\n\n## Why?\n\nI've struggled with making a complex set of components using [Skate.js][skate] where all components needed access to some state. I didn't want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I'm used to with [Ember.js][ember]. So, I started messing around with this.\n\n## Should I use this?\n\nMaybe. In reality, it's not that different than just accessing everything off the `window`, and we all know that's a bad idea (although this works in a Node environment where `window` isn't available, and is built for use with JavaScript modules where there isn't a shared global context).\n\n## Compatibility Notes\n\nThis package is meant to be consumed in an ES6 environment. It relies on [Proxy][proxy] and is built with ES6 classes in mind. Make sure your environment can handle this.\n\n## Prior Art\n\n- [Ember.js service injection][ember service injection]\n\n[service locator pattern]: https://martinfowler.com/articles/injection.html\n[skate]: https://github.com/skatejs/skatejs\n[ember]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[ember service injection]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[proxy]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy\n",
+    "content": "# @alexlafroscia/service-locator\n\nA JS implementation of the [Service Locator pattern][service locator pattern] for ES6 classes.\n\n## Features\n\n- Store commonly-needed values in a single place, allowing easy access to shared state\n- Inject registry access into any ES6 class through a mixin, or extend the provided ES6 class\n- Easily provide stubs for objects in the registry to simplify testing\n\n## A quick example\n\nImagine we have a component that should check if the user is logged in and either prompt for login, or greet the user. We have two parts: fetching the user data, and the component itself.\n\nIf you were to use this package, here is how the code might be set up (note that I'm using a fake Component implementation that is something similar to React or Preact):\n\n```javascript\nimport { registry, RegistryAccess } from '@alexlafroscia/service-locator';\n\nclass UserService {\n  fetchUserInfo() {\n    return fetch('...').then(res => res.json());\n  }\n\n  async isLoggedIn() {\n    const { isLoggedIn } = await this.fetch('...');\n\n    return isLoggedin;\n  }\n};\n\nregistry.register('userService', new UserService());\n\nexport default class LoggedInComponent extends RegistryAccess.Mixin(Component) {\n  async getInitialState() {\n    const isLoggedIn = this.userService.isLoggedIn();\n    this.setState({ isLoggedIn });\n  }\n\n  render({ isLoggedIn }) {\n    return isLoggedIn ? 'Hello!' : 'Please log in!';\n  }\n}\n```\n\nWhat's the benefit here? For one, we've separated out the thing that fetches the data from the thing that displays it, which is always a good idea. Additionally, we made it easy to stub the data fetching in a test:\n\n```javascript\ntest('shows the right thing when the user is logged in', () => {\n  registry.stub('userService', {\n    async fetchUserInfo() {\n      return { isLoggedIn: true };\n    }\n  });\n\n  const result = render(<Component />);\n  expect(result).to.contain('Hello!');\n});\n\ntest('shows the right thing when the user is not logged in', () => {\n  registry.stub('userService', {\n    async fetch() {\n      return { isLoggedIn: false };\n    }\n  });\n\n  const result = render(<Component />);\n  expect(result).to.contain('Please log in!');\n});\n```\n\n## Could you make this easier?\n\nIn fact, you can. I _love_ the syntax that Ember provides for injecting services, and wanted to emulate that as closely as possible. Through the power of [decorators][decorators] I was able to do it. The downside is that you need a [Babel transform for it][decorators-babel-transform], but with that in place, we can clean up the implementation a whole lot. Rather than repeating an extended example, check out the examples in the tests.\n\n\n## Why?\n\nI've struggled with making a complex set of components using [Skate.js][skate] where all components needed access to some state. I didn't want to have pass the properties to every component explicitly, and wished I had an easy way of using service injection the way that I'm used to with [Ember.js][ember]. So, I started messing around with this.\n\n## Should I use this?\n\nMaybe. In reality, it's not that different than just accessing everything off the `window`, and we all know that's a bad idea (although this works in a Node environment where `window` isn't available, and is built for use with JavaScript modules where there isn't a shared global context).\n\n## Compatibility Notes\n\nThis package is meant to be consumed in an ES6 environment. It relies on [Proxy][proxy] and is built with ES6 classes in mind. Make sure your environment can handle this.\n\n## Prior Art\n\n- [Ember.js service injection][ember service injection]\n\n[service locator pattern]: https://martinfowler.com/articles/injection.html\n[skate]: https://github.com/skatejs/skatejs\n[ember]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[ember service injection]: https://www.emberjs.com/api/ember/2.17/classes/@ember%2Fservice/methods/inject?anchor=inject\n[proxy]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy\n[decorators]: https://github.com/tc39/proposal-decorators\n[decorators-babel-transform]: https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy\n",
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/README.md",
     "name": "./README.md",
     "static": true,
@@ -952,14 +1066,14 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@alexlafroscia/service-locator\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Serice locator pattern for ES6 classes\",\n  \"main\": \"dist/index.js\",\n  \"license\": \"MIT\",\n  \"module\": \"lib/index.js\",\n  \"files\": [\n    \"dist\",\n    \"lib\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'\",\n    \"doc\": \"esdoc\",\n    \"doc:open\": \"open docs/index.html\",\n    \"lint\": \"eslint .\",\n    \"lint:fix\": \"eslint --fix .\",\n    \"prepublish\": \"yarn build\",\n    \"pretest\": \"yarn build\",\n    \"test\": \"ava\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.24.0\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.13.1\",\n    \"eslint-config-prettier\": \"^2.9.0\",\n    \"eslint-plugin-prettier\": \"^2.3.1\",\n    \"faker\": \"^4.1.0\",\n    \"prettier\": \"^1.9.2\",\n    \"rollup\": \"^0.52.1\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"@alexlafroscia/service-locator\",\n  \"version\": \"1.1.0\",\n  \"description\": \"Serice locator pattern for ES6 classes\",\n  \"main\": \"dist/index.js\",\n  \"license\": \"MIT\",\n  \"module\": \"lib/index.js\",\n  \"files\": [\n    \"dist\",\n    \"lib\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup lib/index.js --o dist/index.js -f umd --name 'service-locator'\",\n    \"doc\": \"esdoc\",\n    \"doc:open\": \"open docs/index.html\",\n    \"lint\": \"eslint .\",\n    \"lint:fix\": \"eslint --fix .\",\n    \"prepublish\": \"yarn build\",\n    \"pretest\": \"yarn build\",\n    \"test\": \"ava\"\n  },\n  \"devDependencies\": {\n    \"ava\": \"^0.24.0\",\n    \"babel-eslint\": \"^8.0.3\",\n    \"babel-plugin-transform-class-properties\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.13.1\",\n    \"eslint-config-prettier\": \"^2.9.0\",\n    \"eslint-plugin-prettier\": \"^2.3.1\",\n    \"faker\": \"^4.1.0\",\n    \"prettier\": \"^1.9.2\",\n    \"rollup\": \"^0.52.1\"\n  },\n  \"ava\": {\n    \"babel\": {\n      \"plugins\": [\n        \"transform-decorators-legacy\",\n        \"transform-class-properties\"\n      ],\n      \"presets\": [\n        \"@ava/stage-4\"\n      ]\n    }\n  }\n}\n",
     "longname": "/Users/alexlafroscia/Code/javascript/service-locator/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
   },
   {
-    "__docId__": 63,
+    "__docId__": 67,
     "kind": "testFile",
     "name": "test/access-test.js",
     "content": "import test from 'ava';\nimport { RegistryAccess, registry } from '../dist';\n\ntest.beforeEach(() => {\n  registry.register('foo', 'bar');\n});\n\n/** @test {RegistryAccess} */\ntest('can define a class that looks something up in the registry', t => {\n  class Foo extends RegistryAccess {}\n\n  const instance = new Foo();\n  t.is(instance.foo, 'bar');\n  t.pass(instance instanceof Foo);\n});\n\n/** @test {RegistryAccess.Mixin} */\ntest('can extend a base class and provide registry access', t => {\n  class Base {\n    constructor() {\n      this.baseProperty = 'baseProperty';\n    }\n  }\n\n  class ExtendedBase extends RegistryAccess.Mixin(Base) {}\n\n  const instance = new ExtendedBase();\n  t.is(instance.foo, 'bar');\n  t.is(instance.baseProperty, 'baseProperty');\n  t.pass(instance instanceof ExtendedBase);\n});\n",
@@ -970,7 +1084,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 64,
+    "__docId__": 68,
     "kind": "test",
     "name": "test0",
     "testId": 0,
@@ -986,7 +1100,7 @@
     ]
   },
   {
-    "__docId__": 65,
+    "__docId__": 69,
     "kind": "test",
     "name": "test1",
     "testId": 1,
@@ -1002,7 +1116,7 @@
     ]
   },
   {
-    "__docId__": 66,
+    "__docId__": 70,
     "kind": "testFile",
     "name": "test/getting-properties-test.js",
     "content": "import test from 'ava';\nimport { RegistryAccess, registry } from '../dist';\n\ntest.beforeEach(t => {\n  t.context.instance = new RegistryAccess();\n\n  registry.register('config', {\n    loggedIn: true\n  });\n});\n\ntest.afterEach(() => {\n  registry.reset();\n});\n\n/** @test {RegistryAccess} */\ntest('it can access nested properties in a registered value', t => {\n  const { instance } = t.context;\n\n  t.is(instance.config.loggedIn, true);\n});\n\n/** @test {RegistryAccess} */\ntest('it can access properties by building a string', t => {\n  const { instance } = t.context;\n\n  t.deepEqual(instance['config'], {\n    loggedIn: true\n  });\n});\n\n/** @test {RegistryAccess} */\ntest('it ignores non-string property access', t => {\n  const { instance } = t.context;\n\n  t.is(instance[0], undefined);\n});\n",
@@ -1013,7 +1127,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 67,
+    "__docId__": 71,
     "kind": "test",
     "name": "test2",
     "testId": 2,
@@ -1029,7 +1143,7 @@
     ]
   },
   {
-    "__docId__": 68,
+    "__docId__": 72,
     "kind": "test",
     "name": "test3",
     "testId": 3,
@@ -1045,7 +1159,7 @@
     ]
   },
   {
-    "__docId__": 69,
+    "__docId__": 73,
     "kind": "test",
     "name": "test4",
     "testId": 4,
@@ -1061,7 +1175,50 @@
     ]
   },
   {
-    "__docId__": 70,
+    "__docId__": 74,
+    "kind": "testFile",
+    "name": "test/inject-decorator-test.js",
+    "content": "import test from 'ava';\nimport faker from 'faker';\nimport { registry, inject, injectLookup } from '../dist';\n\ntest.afterEach(() => {\n  registry.reset();\n});\n\n/** @test {inject} */\ntest('it can inject registered properties through a decorator', t => {\n  registry.register('foo', faker.lorem.word());\n  registry.register('bar', faker.lorem.word());\n\n  class SomeClass {\n    @inject foo;\n  }\n\n  const instance = new SomeClass();\n\n  t.is(instance.foo, registry.lookup('foo'));\n  t.is(instance.bar, undefined);\n});\n\n/** @test {inject.lookup} */\ntest('it can inject registered properties with another name', t => {\n  registry.register('foo', faker.lorem.word());\n\n  class SomeClass {\n    @injectLookup('foo') bar;\n  }\n\n  const instance = new SomeClass();\n\n  t.is(instance.bar, registry.lookup('foo'));\n  t.is(instance.foo, undefined);\n});\n",
+    "static": true,
+    "longname": "/Users/alexlafroscia/Code/javascript/service-locator/test/inject-decorator-test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "test",
+    "name": "test5",
+    "testId": 5,
+    "memberof": "test/inject-decorator-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/inject-decorator-test.js~test5",
+    "access": null,
+    "description": "it can inject registered properties through a decorator",
+    "lineNumber": 10,
+    "testTargets": [
+      "inject"
+    ]
+  },
+  {
+    "__docId__": 76,
+    "kind": "test",
+    "name": "test6",
+    "testId": 6,
+    "memberof": "test/inject-decorator-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/inject-decorator-test.js~test6",
+    "access": null,
+    "description": "it can inject registered properties with another name",
+    "lineNumber": 25,
+    "testTargets": [
+      "inject.lookup"
+    ]
+  },
+  {
+    "__docId__": 77,
     "kind": "testFile",
     "name": "test/registry-test.js",
     "content": "import test from 'ava';\nimport faker from 'faker';\nimport { registry } from '../dist';\n\ntest.afterEach(() => {\n  registry.reset();\n});\n\n/** @test {Registry.register} */\ntest('it can register a value at a key', t => {\n  const value = faker.lorem.word();\n  registry.register('foo', value);\n\n  t.is(registry.lookup('foo'), value);\n});\n\n/** @test {Registry.register} */\ntest('it can overwrite a value at a key', t => {\n  const original = faker.lorem.word();\n  const newValue = faker.lorem.word();\n\n  registry.register('foo', original);\n  registry.register('foo', newValue);\n\n  t.is(registry.lookup('foo'), newValue);\n});\n\n/** @test {Registry.lookup} */\ntest('it returns `undefined` when a key has not been registered', t => {\n  t.is(registry.lookup('foo'), undefined);\n});\n\n/** @test {Registry.reset} */\ntest('it can reset the registry', t => {\n  const value = faker.lorem.word();\n\n  registry.register('foo', value);\n  registry.reset();\n\n  t.is(registry.lookup('foo'), undefined);\n});\n",
@@ -1072,39 +1229,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 71,
-    "kind": "test",
-    "name": "test5",
-    "testId": 5,
-    "memberof": "test/registry-test.js",
-    "testDepth": 0,
-    "static": true,
-    "longname": "test/registry-test.js~test5",
-    "access": null,
-    "description": "it can register a value at a key",
-    "lineNumber": 10,
-    "testTargets": [
-      "Registry.register"
-    ]
-  },
-  {
-    "__docId__": 72,
-    "kind": "test",
-    "name": "test6",
-    "testId": 6,
-    "memberof": "test/registry-test.js",
-    "testDepth": 0,
-    "static": true,
-    "longname": "test/registry-test.js~test6",
-    "access": null,
-    "description": "it can overwrite a value at a key",
-    "lineNumber": 18,
-    "testTargets": [
-      "Registry.register"
-    ]
-  },
-  {
-    "__docId__": 73,
+    "__docId__": 78,
     "kind": "test",
     "name": "test7",
     "testId": 7,
@@ -1113,14 +1238,14 @@
     "static": true,
     "longname": "test/registry-test.js~test7",
     "access": null,
-    "description": "it returns `undefined` when a key has not been registered",
-    "lineNumber": 29,
+    "description": "it can register a value at a key",
+    "lineNumber": 10,
     "testTargets": [
-      "Registry.lookup"
+      "Registry.register"
     ]
   },
   {
-    "__docId__": 74,
+    "__docId__": 79,
     "kind": "test",
     "name": "test8",
     "testId": 8,
@@ -1129,6 +1254,38 @@
     "static": true,
     "longname": "test/registry-test.js~test8",
     "access": null,
+    "description": "it can overwrite a value at a key",
+    "lineNumber": 18,
+    "testTargets": [
+      "Registry.register"
+    ]
+  },
+  {
+    "__docId__": 80,
+    "kind": "test",
+    "name": "test9",
+    "testId": 9,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test9",
+    "access": null,
+    "description": "it returns `undefined` when a key has not been registered",
+    "lineNumber": 29,
+    "testTargets": [
+      "Registry.lookup"
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "test",
+    "name": "test10",
+    "testId": 10,
+    "memberof": "test/registry-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/registry-test.js~test10",
+    "access": null,
     "description": "it can reset the registry",
     "lineNumber": 34,
     "testTargets": [
@@ -1136,7 +1293,7 @@
     ]
   },
   {
-    "__docId__": 75,
+    "__docId__": 82,
     "kind": "testFile",
     "name": "test/stub-test.js",
     "content": "import test from 'ava';\nimport faker from 'faker';\nimport { registry } from '../dist';\n\ntest.afterEach(() => {\n  registry.reset();\n});\n\n/** @test {Registry.stub} */\ntest('it fails to stub a string', t => {\n  registry.register('value', 'string');\n  t.throws(() => {\n    registry.stub('value', 'another string');\n  });\n});\n\n/** @test {Registry.stub} */\ntest('it fails to stub a number', t => {\n  registry.register('value', 42);\n  t.throws(() => {\n    registry.stub('value', 32);\n  });\n});\n\n/** @test {Registry.stub} */\ntest(\"it can stub an object's values\", t => {\n  const originalProperty = faker.lorem.word();\n  const stubbedProperty = faker.lorem.word();\n  const replacementValue = faker.lorem.word();\n  registry.register('value', { originalProperty, stubbedProperty });\n\n  const stubbedObject = registry.stub('value', {\n    stubbedProperty: replacementValue\n  });\n\n  t.not(stubbedProperty, replacementValue);\n  t.is(registry.lookup('value').stubbedProperty, replacementValue);\n  t.is(registry.lookup('value').originalProperty, originalProperty);\n  t.is(stubbedObject.stubbedProperty, replacementValue);\n  t.is(stubbedObject.originalProperty, originalProperty);\n});\n\n/** @test {Registry.stub} */\ntest(\"it can stub an object's methods\", t => {\n  registry.register('value', {\n    property: 'foo',\n    foo() {\n      return 'foo';\n    }\n  });\n  const stubbedObject = registry.stub('value', {\n    foo() {\n      return 'bar';\n    }\n  });\n\n  t.is(stubbedObject.property, 'foo', 'The entire object is not replaced');\n  t.is(stubbedObject.foo(), 'bar', 'The replacement method is called');\n});\n",
@@ -1147,39 +1304,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 76,
-    "kind": "test",
-    "name": "test9",
-    "testId": 9,
-    "memberof": "test/stub-test.js",
-    "testDepth": 0,
-    "static": true,
-    "longname": "test/stub-test.js~test9",
-    "access": null,
-    "description": "it fails to stub a string",
-    "lineNumber": 10,
-    "testTargets": [
-      "Registry.stub"
-    ]
-  },
-  {
-    "__docId__": 77,
-    "kind": "test",
-    "name": "test10",
-    "testId": 10,
-    "memberof": "test/stub-test.js",
-    "testDepth": 0,
-    "static": true,
-    "longname": "test/stub-test.js~test10",
-    "access": null,
-    "description": "it fails to stub a number",
-    "lineNumber": 18,
-    "testTargets": [
-      "Registry.stub"
-    ]
-  },
-  {
-    "__docId__": 78,
+    "__docId__": 83,
     "kind": "test",
     "name": "test11",
     "testId": 11,
@@ -1188,14 +1313,14 @@
     "static": true,
     "longname": "test/stub-test.js~test11",
     "access": null,
-    "description": "it can stub an object's values",
-    "lineNumber": 26,
+    "description": "it fails to stub a string",
+    "lineNumber": 10,
     "testTargets": [
       "Registry.stub"
     ]
   },
   {
-    "__docId__": 79,
+    "__docId__": 84,
     "kind": "test",
     "name": "test12",
     "testId": 12,
@@ -1203,6 +1328,38 @@
     "testDepth": 0,
     "static": true,
     "longname": "test/stub-test.js~test12",
+    "access": null,
+    "description": "it fails to stub a number",
+    "lineNumber": 18,
+    "testTargets": [
+      "Registry.stub"
+    ]
+  },
+  {
+    "__docId__": 85,
+    "kind": "test",
+    "name": "test13",
+    "testId": 13,
+    "memberof": "test/stub-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/stub-test.js~test13",
+    "access": null,
+    "description": "it can stub an object's values",
+    "lineNumber": 26,
+    "testTargets": [
+      "Registry.stub"
+    ]
+  },
+  {
+    "__docId__": 86,
+    "kind": "test",
+    "name": "test14",
+    "testId": 14,
+    "memberof": "test/stub-test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/stub-test.js~test14",
     "access": null,
     "description": "it can stub an object's methods",
     "lineNumber": 44,

@@ -31,6 +31,8 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/index.js~RegistryAccess.html">RegistryAccess</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/registry.js~Registry.html">Registry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-inject">inject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-injectLookup">injectLookup</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-registry">registry</a></span></span></li>
 </ul>
 </div>
@@ -38,6 +40,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">lib/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Registry from &apos;./registry&apos;;
+export { default as inject, injectLookup } from &apos;./inject&apos;;
 
 /**
  * The instance of the registry to share between classes that inject it

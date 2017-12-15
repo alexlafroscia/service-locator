@@ -12,6 +12,18 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "@alexlafroscia/service-locator/lib/inject.js~inject",
+    "function/index.html#static-function-inject",
+    "<span>inject</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/inject.js</span>",
+    "function"
+  ],
+  [
+    "@alexlafroscia/service-locator/lib/inject.js~injectlookup",
+    "function/index.html#static-function-injectLookup",
+    "<span>injectLookup</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/inject.js</span>",
+    "function"
+  ],
+  [
     "@alexlafroscia/service-locator/lib/index.js~registry",
     "variable/index.html#static-variable-registry",
     "<span>registry</span> <span class=\"search-result-import-path\">@alexlafroscia/service-locator/lib/index.js</span>",
@@ -39,6 +51,18 @@ window.esdocSearchIndex = [
     "registryaccess lib/index.js~registryaccess,registryaccess",
     "test-file/test/getting-properties-test.js.html#lineNumber24",
     "it can access properties by building a string",
+    "test"
+  ],
+  [
+    "inject lib/inject.js~inject,inject",
+    "test-file/test/inject-decorator-test.js.html#lineNumber10",
+    "it can inject registered properties through a decorator",
+    "test"
+  ],
+  [
+    "inject.lookup inject.lookup,inject.lookup",
+    "test-file/test/inject-decorator-test.js.html#lineNumber25",
+    "it can inject registered properties with another name",
     "test"
   ],
   [
@@ -396,6 +420,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "lib/inject.js",
+    "file/lib/inject.js.html",
+    "lib/inject.js",
+    "file"
+  ],
+  [
     "lib/registry.js",
     "file/lib/registry.js.html",
     "lib/registry.js",
@@ -447,6 +477,12 @@ window.esdocSearchIndex = [
     "test/getting-properties-test.js",
     "test-file/test/getting-properties-test.js.html",
     "test/getting-properties-test.js",
+    "testFile"
+  ],
+  [
+    "test/inject-decorator-test.js",
+    "test-file/test/inject-decorator-test.js.html",
+    "test/inject-decorator-test.js",
     "testFile"
   ],
   [

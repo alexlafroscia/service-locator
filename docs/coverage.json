@@ -1,14 +1,21 @@
 {
-  "coverage": "61.53%",
-  "expectCount": 13,
-  "actualCount": 8,
+  "coverage": "62.5%",
+  "expectCount": 16,
+  "actualCount": 10,
   "files": {
     "lib/index.js": {
       "expectCount": 5,
       "actualCount": 3,
       "undocumentLines": [
-        19,
-        52
+        20,
+        53
+      ]
+    },
+    "lib/inject.js": {
+      "expectCount": 3,
+      "actualCount": 2,
+      "undocumentLines": [
+        3
       ]
     },
     "lib/registry.js": {

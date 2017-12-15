@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">test/registry-test.js | @alexlafroscia/service-locator</title>
+  <title data-ice="title">lib/inject.js | @alexlafroscia/service-locator</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -38,48 +38,68 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">test/registry-test.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import test from &apos;ava&apos;;
-import faker from &apos;faker&apos;;
-import { registry } from &apos;../dist&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">lib/inject.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { registry } from &apos;./index&apos;;
 
-test.afterEach(() =&gt; {
-  registry.reset();
-});
+function lookup(key) {
+  return {
+    get() {
+      return registry.lookup(key);
+    }
+  };
+}
 
-/** @test {Registry.register} */
-test(&apos;it can register a value at a key&apos;, t =&gt; {
-  const value = faker.lorem.word();
-  registry.register(&apos;foo&apos;, value);
+/**
+ * Injects something off the registry, using the name of the property
+ *
+ * To be used as a property decorator
+ * Requires `babel-plugin-transform-decorators-legacy`.
+ *
+ * @experimental It depends on a Babel transform that is not yet stage 4
+ * @example &lt;caption&gt;Injecting registry access into a class&lt;/caption&gt;
+ * import { registry, inject } from &apos;@alexlafroscia/service-locator&apos;;
+ *
+ * registry.register(&apos;config&apos;, {
+ *   loggedIn: true
+ * });
+ *
+ * class Foo {
+ *   \@inject config;
+ * }
+ *
+ * const instance = new Foo();
+ * instance.config.loggedIn; // true
+ */
+export default function inject(target, key) {
+  return lookup(key);
+}
 
-  t.is(registry.lookup(&apos;foo&apos;), value);
-});
-
-/** @test {Registry.register} */
-test(&apos;it can overwrite a value at a key&apos;, t =&gt; {
-  const original = faker.lorem.word();
-  const newValue = faker.lorem.word();
-
-  registry.register(&apos;foo&apos;, original);
-  registry.register(&apos;foo&apos;, newValue);
-
-  t.is(registry.lookup(&apos;foo&apos;), newValue);
-});
-
-/** @test {Registry.lookup} */
-test(&apos;it returns `undefined` when a key has not been registered&apos;, t =&gt; {
-  t.is(registry.lookup(&apos;foo&apos;), undefined);
-});
-
-/** @test {Registry.reset} */
-test(&apos;it can reset the registry&apos;, t =&gt; {
-  const value = faker.lorem.word();
-
-  registry.register(&apos;foo&apos;, value);
-  registry.reset();
-
-  t.is(registry.lookup(&apos;foo&apos;), undefined);
-});
+/**
+ * Injects something off the registry, using an alternate name
+ *
+ * To be used as a property decorator.
+ * Requires `babel-plugin-transform-decorators-legacy`.
+ *
+ * @experimental It depends on a Babel transform that is not yet stage 4
+ * @example &lt;caption&gt;Injecting registry access into a class&lt;/caption&gt;
+ * import { registry, injectLookup } from &apos;@alexlafroscia/service-locator&apos;;
+ *
+ * registry.register(&apos;config&apos;, {
+ *   loggedIn: true
+ * });
+ *
+ * class Foo {
+ *   \@inject.lookup(&apos;config&apos;) userSessionConfig
+ * }
+ *
+ * const instance = new Foo();
+ * instance.userSessionConfig.loggedIn; // true
+ */
+export function injectLookup(registryKey) {
+  return function() {
+    return lookup(registryKey);
+  };
+}
 </code></pre>
 
 </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">test/registry-test.js | @alexlafroscia/service-locator</title>
+  <title data-ice="title">test/inject-decorator-test.js | @alexlafroscia/service-locator</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -38,47 +38,42 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">test/registry-test.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">test/inject-decorator-test.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import test from &apos;ava&apos;;
 import faker from &apos;faker&apos;;
-import { registry } from &apos;../dist&apos;;
+import { registry, inject, injectLookup } from &apos;../dist&apos;;
 
 test.afterEach(() =&gt; {
   registry.reset();
 });
 
-/** @test {Registry.register} */
-test(&apos;it can register a value at a key&apos;, t =&gt; {
-  const value = faker.lorem.word();
-  registry.register(&apos;foo&apos;, value);
+/** @test {inject} */
+test(&apos;it can inject registered properties through a decorator&apos;, t =&gt; {
+  registry.register(&apos;foo&apos;, faker.lorem.word());
+  registry.register(&apos;bar&apos;, faker.lorem.word());
 
-  t.is(registry.lookup(&apos;foo&apos;), value);
+  class SomeClass {
+    @inject foo;
+  }
+
+  const instance = new SomeClass();
+
+  t.is(instance.foo, registry.lookup(&apos;foo&apos;));
+  t.is(instance.bar, undefined);
 });
 
-/** @test {Registry.register} */
-test(&apos;it can overwrite a value at a key&apos;, t =&gt; {
-  const original = faker.lorem.word();
-  const newValue = faker.lorem.word();
+/** @test {inject.lookup} */
+test(&apos;it can inject registered properties with another name&apos;, t =&gt; {
+  registry.register(&apos;foo&apos;, faker.lorem.word());
 
-  registry.register(&apos;foo&apos;, original);
-  registry.register(&apos;foo&apos;, newValue);
+  class SomeClass {
+    @injectLookup(&apos;foo&apos;) bar;
+  }
 
-  t.is(registry.lookup(&apos;foo&apos;), newValue);
-});
+  const instance = new SomeClass();
 
-/** @test {Registry.lookup} */
-test(&apos;it returns `undefined` when a key has not been registered&apos;, t =&gt; {
-  t.is(registry.lookup(&apos;foo&apos;), undefined);
-});
-
-/** @test {Registry.reset} */
-test(&apos;it can reset the registry&apos;, t =&gt; {
-  const value = faker.lorem.word();
-
-  registry.register(&apos;foo&apos;, value);
-  registry.reset();
-
-  t.is(registry.lookup(&apos;foo&apos;), undefined);
+  t.is(instance.bar, registry.lookup(&apos;foo&apos;));
+  t.is(instance.foo, undefined);
 });
 </code></pre>
 
